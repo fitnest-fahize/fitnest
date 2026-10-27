@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — FitNest</title>
+    <meta
+      name="description"
+      content="Learn the story behind FitNest, our mission to make fitness accessible across India, and meet the certified coaches who make it happen."
+    />
+    <link rel="canonical" href="https://fitnestonline.in/about" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fitnestonline.in/about" />
+    <meta property="og:title" content="About Us — FitNest" />
+    <meta
+      property="og:description"
+      content="Learn the story behind FitNest, our mission to make fitness accessible across India, and meet the certified coaches who make it happen."
+    />
+    <meta property="og:image" content="images/about-hero.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#16a34a',
+              'primary-hover': '#15803d',
+              secondary: '#15803d',
+              charcoal: '#111827',
+              'charcoal-card': '#1f2937',
+              muted: '#f9fafb',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": "https://fitnestonline.in/about#webpage",
+        "name": "About Us — FitNest",
+        "url": "https://fitnestonline.in/about",
+        "isPartOf": { "@id": "https://fitnestonline.in/#website" },
+        "about": { "@id": "https://fitnestonline.in/#organization" }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-gray-800 antialiased selection:bg-emerald-500 selection:text-white">
+    <!-- ─── HEADER / NAVBAR ─── -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center shrink-0">
+          <img
+            src="images/logo-transparent.png"
+            alt="FitNest Logo"
+            class="logo-light block h-auto max-h-10 md:max-h-12 w-auto max-w-[160px] object-contain drop-shadow"
+          />
+          <img
+            src="images/logo-transparent.png"
+            alt="FitNest Logo"
+            class="logo-dark hidden h-auto max-h-10 md:max-h-12 w-auto max-w-[160px] object-contain"
+          />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="nav-link text-sm font-semibold">Home</a>
+          <a href="about.html" class="nav-link text-sm font-semibold active">About Us</a>
+          <a href="index.html#services" class="nav-link text-sm font-semibold">Our Services</a>
+          <a href="index.html#plans" class="nav-link text-sm font-semibold">Training Plans</a>
+          <a href="index.html#tips" class="nav-link text-sm font-semibold">Lifestyle Tips</a>
+          <a href="index.html#contact" class="nav-link text-sm font-semibold">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="index.html#contact"
+            class="bg-emerald-600 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all duration-200 shadow-lg shadow-emerald-600/30 hover:scale-105"
+          >
+            Book a Session
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          id="mobile-menu-toggle"
+          class="mobile-menu-btn lg:hidden p-2 rounded-lg text-white hover:text-emerald-400 transition-colors focus:outline-none"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-2xl transition-all duration-300">
+        <nav aria-label="Mobile navigation" class="flex flex-col px-6 py-4 gap-1">
+          <a href="index.html" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Home</a>
+          <a href="about.html" class="py-3 text-sm font-semibold text-emerald-600 border-b border-gray-100">About Us</a>
+          <a href="index.html#services" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Our Services</a>
+          <a href="index.html#plans" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Training Plans</a>
+          <a href="index.html#tips" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Lifestyle Tips</a>
+          <a href="index.html#contact" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Contact</a>
+          <a
+            href="index.html#contact"
+            class="mt-3 bg-emerald-600 text-white text-sm font-bold px-5 py-3 rounded-full text-center hover:bg-emerald-700 transition-all shadow-md"
+          >
+            Book a Session
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ─── ABOUT HERO ─── -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <img
+        src="images/about-hero.jpg"
+        alt="FitNest trainer coaching online"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/65 to-gray-900/85 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-24">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 text-white bg-emerald-600/90 shadow-md">
+          Our Story
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 font-heading tracking-tight drop-shadow-md">
+          We Believe Fitness Belongs at Home
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto drop-shadow">
+          FitNest was born from a simple idea — that world-class training shouldn't require a gym membership, a commute, or a rigid schedule.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── TRUST STATS BAR ─── -->
+    <section class="py-12 bg-charcoal text-white border-y border-white/5">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          <div class="p-4">
+            <span class="text-3xl sm:text-4xl font-black text-white font-heading tracking-tight block mb-1">500+</span>
+            <span class="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Clients Trained</span>
+          </div>
+
+          <div class="p-4">
+            <span class="text-3xl sm:text-4xl font-black text-white font-heading tracking-tight block mb-1">1,000+</span>
+            <span class="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Sessions Delivered</span>
+          </div>
+
+          <div class="p-4">
+            <span class="text-3xl sm:text-4xl font-black text-white font-heading tracking-tight block mb-1">4.9★</span>
+            <span class="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Average Rating</span>
+          </div>
+
+          <div class="p-4">
+            <span class="text-3xl sm:text-4xl font-black text-white font-heading tracking-tight block mb-1">3+</span>
+            <span class="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OUR STORY SECTION ─── -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Origins</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-heading tracking-tight leading-tight">
+              Our Story
+            </h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed text-base sm:text-lg">
+              <p>
+                FitNest started in 2026 when our founder, a certified personal trainer, noticed a gap: millions of Indians wanted to get fit but couldn't commit to gym schedules, expensive memberships, or long commutes.
+              </p>
+              <p>
+                We built FitNest to solve exactly that. By bringing expert trainers directly into your home through live video sessions, we've helped many clients across India transform their health — on their own terms.
+              </p>
+              <p>
+                Today, FitNest is a growing community of dedicated coaches and motivated clients who believe that consistency, not perfection, is the key to lasting fitness.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <img
+                src="images/mission.jpg"
+                alt="FitNest community and coaches"
+                class="w-full h-full object-cover max-h-[480px]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OUR MISSION & VALUES SECTION ─── -->
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Core Purpose</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-heading tracking-tight">
+            Our Mission
+          </h2>
+          <p class="text-xl text-gray-700 leading-relaxed font-medium">
+            "To make expert fitness guidance accessible, affordable, and genuinely effective for every Indian — regardless of where they live or how busy their life is."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Value 1 -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke-width="2"/></svg>
+            </div>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading">Results First</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Every programme is built around your specific goals — not a generic template.
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading">Genuine Care</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              We treat every client as a person, not a number. Your progress is our success.
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading">Expert Guidance</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              All our trainers are certified professionals with years of real-world coaching experience.
+            </p>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading">Community</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              You're never alone on your journey. Our group sessions and WhatsApp community keep you motivated.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MEET YOUR COACHES SECTION ─── -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Our Coaches</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
+            Meet Your Coaches
+          </h2>
+          <p class="text-gray-500 text-lg leading-relaxed">
+            Certified, experienced, and genuinely passionate about helping you reach your goals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Trainer 1: Arjun Kapoor -->
+          <div class="group rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
+            <div class="relative overflow-hidden h-80">
+              <img
+                src="images/trainer-1.jpg"
+                alt="Arjun Kapoor"
+                class="w-full h-full object-cover object-top img-zoom"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              <span class="absolute bottom-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                Strength & Conditioning
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-black text-gray-900 font-heading mb-0.5">Arjun Kapoor</h3>
+              <p class="text-sm font-semibold text-emerald-600 mb-3">Head Trainer & Founder</p>
+              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+                Arjun founded FitNest after training hundreds of clients in Mumbai. He specialises in strength training, fat loss, and building sustainable fitness habits.
+              </p>
+              <div class="space-y-2 pt-4 border-t border-gray-100 text-xs text-gray-500">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold">✓</span>
+                  <span>NASM-CPT, ACE Certified</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold">✓</span>
+                  <span>8 years of coaching experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 2: Priya Nair -->
+          <div class="group rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
+            <div class="relative overflow-hidden h-80">
+              <img
+                src="images/trainer-2.jpg"
+                alt="Priya Nair"
+                class="w-full h-full object-cover object-top img-zoom"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              <span class="absolute bottom-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                Yoga & Functional Fitness
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-black text-gray-900 font-heading mb-0.5">Priya Nair</h3>
+              <p class="text-sm font-semibold text-emerald-600 mb-3">Senior Fitness Coach</p>
+              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+                Priya brings a holistic approach to fitness, blending yoga, mobility work, and functional training. She specialises in women's health and postnatal fitness.
+              </p>
+              <div class="space-y-2 pt-4 border-t border-gray-100 text-xs text-gray-500">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold">✓</span>
+                  <span>RYT-200, ISSA Certified</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold">✓</span>
+                  <span>6 years of coaching experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 3: Rohan Mehta -->
+          <div class="group rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
+            <div class="relative overflow-hidden h-80">
+              <img
+                src="images/trainer-3.jpg"
+                alt="Rohan Mehta"
+                class="w-full h-full object-cover object-top img-zoom"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              <span class="absolute bottom-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                Sports Nutrition & Diet
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-black text-gray-900 font-heading mb-0.5">Rohan Mehta</h3>
+              <p class="text-sm font-semibold text-emerald-600 mb-3">Nutrition & Wellness Coach</p>
+              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+                Rohan helps clients fuel their performance with practical, sustainable nutrition strategies. No fad diets — just science-backed guidance that fits real Indian lifestyles.
+              </p>
+              <div class="space-y-2 pt-4 border-t border-gray-100 text-xs text-gray-500">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold">✓</span>
+                  <span>Precision Nutrition Level 2</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold">✓</span>
+                  <span>5 years of coaching experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA SECTION ─── -->
+    <section class="py-20 bg-charcoal text-white text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight font-heading">
+          Ready to Start Your Journey?
+        </h2>
+        <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+          Book a free 30-minute discovery call with one of our coaches and find out exactly how FitNest can help you.
+        </p>
+        <a
+          href="index.html#contact"
+          class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-10 py-5 rounded-full text-lg transition-all shadow-2xl shadow-emerald-600/30 hover:scale-105"
+        >
+          Book a Free Call
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="bg-charcoal text-white border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div class="lg:col-span-1">
+            <a href="index.html" class="inline-block mb-4">
+              <img
+                src="images/logo-transparent.png"
+                alt="FitNest"
+                class="block h-auto max-h-10 w-auto max-w-[140px] object-contain"
+              />
+            </a>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 font-semibold">
+              Your Home. Your Fitness. Your FitNest.
+            </p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Expert-led online training that fits your life — no gym required.
+            </p>
+            <div class="flex items-center gap-3 mt-6">
+              <a href="https://instagram.com/fitnest" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com/fitnest" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com/@fitnest" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://twitter.com/fitnest" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
+            <ul class="space-y-3">
+              <li><a href="index.html#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Personal Training</a></li>
+              <li><a href="index.html#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Couple Workouts</a></li>
+              <li><a href="index.html#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Group Fitness</a></li>
+              <li><a href="index.html#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Nutrition Guidance</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="about.html" class="text-white text-sm hover:text-emerald-400 transition-colors font-semibold">About Us</a></li>
+              <li><a href="index.html#plans" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Training Plans</a></li>
+              <li><a href="index.html#tips" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Lifestyle Tips</a></li>
+              <li><a href="index.html#contact" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact Us</h3>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li><a href="mailto:homeworkout@fitnesonline.in" class="hover:text-emerald-400 transition-colors">homeworkout@fitnesonline.in</a></li>
+              <li><a href="https://wa.me/916238188277" target="_blank" class="hover:text-emerald-400 transition-colors">WhatsApp: +91 62381 88277</a></li>
+              <li class="text-gray-500">fitnestonline.in</li>
+            </ul>
+            <a
+              href="https://wa.me/916238188277"
+              target="_blank"
+              class="inline-flex items-center gap-2 mt-5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors"
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+          <p>© 2026 FitNest. All rights reserved. | fitnestonline.in</p>
+          <div class="flex gap-6">
+            <a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a>
+            <a href="index.html#services" class="hover:text-gray-300 transition-colors">Services</a>
+            <a href="index.html#plans" class="hover:text-gray-300 transition-colors">Plans</a>
+            <a href="index.html#contact" class="hover:text-gray-300 transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/916238188277" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

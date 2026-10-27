@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy Lifestyle Tips — FitNest Coach Articles</title>
+    <meta
+      name="description"
+      content="Expert advice on nutrition, home HIIT workouts, and sleep recovery straight from certified FitNest coaches."
+    />
+    <link rel="canonical" href="https://fitnestonline.in/tips" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#16a34a',
+              secondary: '#15803d',
+              charcoal: '#111827',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-gray-800 antialiased selection:bg-emerald-500 selection:text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <a href="index.html" class="flex items-center shrink-0">
+          <img src="images/logo-transparent.png" alt="FitNest Logo" class="block h-auto max-h-10 md:max-h-12 w-auto max-w-[160px] object-contain" />
+        </a>
+        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">About Us</a>
+          <a href="services.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Our Services</a>
+          <a href="plans.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Training Plans</a>
+          <a href="tips.html" class="text-sm font-semibold text-emerald-600 font-bold">Lifestyle Tips</a>
+          <a href="contact.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="contact.html" class="bg-emerald-600 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all shadow-md">
+            Book a Session
+          </a>
+        </div>
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg text-gray-800 hover:text-emerald-600" aria-label="Toggle navigation">
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl px-6 py-4 flex flex-col gap-2">
+        <a href="index.html" class="py-2.5 text-sm font-semibold text-gray-700">Home</a>
+        <a href="about.html" class="py-2.5 text-sm font-semibold text-gray-700">About Us</a>
+        <a href="services.html" class="py-2.5 text-sm font-semibold text-gray-700">Our Services</a>
+        <a href="plans.html" class="py-2.5 text-sm font-semibold text-gray-700">Training Plans</a>
+        <a href="tips.html" class="py-2.5 text-sm font-semibold text-emerald-600">Lifestyle Tips</a>
+        <a href="contact.html" class="py-2.5 text-sm font-semibold text-gray-700">Contact</a>
+        <a href="contact.html" class="mt-2 bg-emerald-600 text-white text-sm font-bold px-5 py-3 rounded-full text-center">Book a Session</a>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-36 pb-16 bg-gray-50 border-b border-gray-100 text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-100 rounded-full inline-block mb-3">Coach Insights</span>
+        <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
+          Healthy Lifestyle Tips
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Actionable, science-backed guidance on nutrition, home workouts, and recovery straight from certified FitNest coaches.
+        </p>
+      </div>
+    </section>
+
+    <!-- Articles List -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <!-- Article 1: Nutrition -->
+        <article class="rounded-3xl border border-gray-100 shadow-sm overflow-hidden bg-white">
+          <div class="h-72 w-full overflow-hidden relative">
+            <img src="images/tips-nutrition.jpg" alt="High-Protein Meals" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between">
+              <span class="bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Nutrition</span>
+              <span class="text-white text-xs font-semibold">4 min read</span>
+            </div>
+          </div>
+          <div class="p-8 sm:p-10">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 font-heading mb-4">
+              5 Easy High-Protein Meals You Can Make in 15 Minutes
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Fuel your workouts without spending hours in the kitchen. Getting adequate daily protein supports muscle retention, accelerates fat reduction, and keeps hunger stable throughout the workday.
+            </p>
+            <div class="space-y-4 my-8">
+              <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                <h3 class="font-bold text-gray-900 text-base mb-1">1. Low-Fat Paneer & Bell Pepper Toss (36g Protein)</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Cube 200g low-fat malai paneer. Sauté in half a teaspoon of olive oil with sliced peppers, onions, jeera, and rock salt. Ready in 8 minutes.</p>
+              </div>
+              <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                <h3 class="font-bold text-gray-900 text-base mb-1">2. Spiced Moong & Peanut Chaat (20g Clean Plant Protein)</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Mix steamed green moong sprouts with diced cucumber, onions, tomatoes, freshly squeezed lime, and roasted peanuts for crunch.</p>
+              </div>
+              <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                <h3 class="font-bold text-gray-900 text-base mb-1">3. Masala Egg Bhurji on Multigrain Toast (24g Protein)</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Whisk 3 eggs with chopped green chilies, coriander, onions, and turmeric. Scramble lightly and serve on two slices of whole wheat sourdough.</p>
+              </div>
+            </div>
+            <a href="https://wa.me/916238188277?text=Hi%20FitNest!%20I'd%20love%20a%20personalized%20Indian%20high-protein%20meal%20plan." target="_blank" class="inline-flex items-center gap-2 text-emerald-600 font-bold hover:underline">
+              Ask coach for a customized meal plan on WhatsApp &rarr;
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2: Workout -->
+        <article class="rounded-3xl border border-gray-100 shadow-sm overflow-hidden bg-white">
+          <div class="h-72 w-full overflow-hidden relative">
+            <img src="images/tips-workout.jpg" alt="Home HIIT Workout" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between">
+              <span class="bg-orange-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Workout</span>
+              <span class="text-white text-xs font-semibold">5 min read</span>
+            </div>
+          </div>
+          <div class="p-8 sm:p-10">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 font-heading mb-4">
+              The 20-Minute Home HIIT Routine That Actually Works
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              No equipment needed. This science-backed interval routine burns calories and builds cardiovascular endurance in just 20 minutes right in your living room.
+            </p>
+            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 mb-8 text-sm text-emerald-900">
+              <h3 class="font-bold text-base text-emerald-950 mb-2">Interval Structure:</h3>
+              <p>Work for 40 seconds, rest for 20 seconds. Repeat the 4-movement circuit 4 times through for a grueling 20-minute calorie furnace.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <span class="font-bold text-emerald-600">Exercise 1:</span>
+                <p class="text-sm font-semibold text-gray-900 mt-1">High Knees / Modified March</p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <span class="font-bold text-emerald-600">Exercise 2:</span>
+                <p class="text-sm font-semibold text-gray-900 mt-1">Tempo Bodyweight Squats</p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <span class="font-bold text-emerald-600">Exercise 3:</span>
+                <p class="text-sm font-semibold text-gray-900 mt-1">Incline Push-ups or Floor Push-ups</p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <span class="font-bold text-emerald-600">Exercise 4:</span>
+                <p class="text-sm font-semibold text-gray-900 mt-1">Controlled Mountain Climbers</p>
+              </div>
+            </div>
+            <a href="contact.html" class="inline-flex items-center gap-2 text-emerald-600 font-bold hover:underline">
+              Experience live form-guided HIIT in a free session &rarr;
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3: Wellness -->
+        <article class="rounded-3xl border border-gray-100 shadow-sm overflow-hidden bg-white">
+          <div class="h-72 w-full overflow-hidden relative">
+            <img src="images/tips-wellness.jpg" alt="Sleep Recovery" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between">
+              <span class="bg-blue-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Wellness</span>
+              <span class="text-white text-xs font-semibold">3 min read</span>
+            </div>
+          </div>
+          <div class="p-8 sm:p-10">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 font-heading mb-4">
+              Why Sleep Is Your Most Powerful Recovery Tool
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Your muscles don't grow while lifting; they repair and grow during deep sleep. Discover how optimizing your rest delivers 2x the fitness results.
+            </p>
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed mb-8">
+              <p>During deep non-REM stage 3 sleep, blood supply to your muscles increases significantly, delivering extra oxygen and nutrients that facilitate tissue repair and cell regeneration.</p>
+              <p>Sleep deprivation also elevates cortisol (the stress hormone) which prompts visceral belly fat storage and breaks down lean muscle tissue.</p>
+            </div>
+            <a href="contact.html" class="inline-flex items-center gap-2 text-emerald-600 font-bold hover:underline">
+              Talk to our coach about personalized recovery habits &rarr;
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <img src="images/logo-transparent.png" alt="FitNest" class="h-10 mx-auto sm:mx-0 mb-3" />
+          <p class="text-gray-400 text-sm">Your Home. Your Fitness. Your FitNest.</p>
+        </div>
+        <div class="flex gap-6 text-sm text-gray-400">
+          <a href="index.html" class="hover:text-emerald-400">Home</a>
+          <a href="about.html" class="hover:text-emerald-400">About</a>
+          <a href="plans.html" class="hover:text-emerald-400">Plans</a>
+          <a href="contact.html" class="hover:text-emerald-400">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

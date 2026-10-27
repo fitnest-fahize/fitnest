@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services — FitNest Home Fitness Programs</title>
+    <meta
+      name="description"
+      content="Explore FitNest live home workout programs: 1-on-1 Personal Training, Couple Workouts, Group Fitness, and Nutrition Guidance led by certified trainers."
+    />
+    <link rel="canonical" href="https://fitnestonline.in/services" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#16a34a',
+              secondary: '#15803d',
+              charcoal: '#111827',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-gray-800 antialiased selection:bg-emerald-500 selection:text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <a href="index.html" class="flex items-center shrink-0">
+          <img src="images/logo-transparent.png" alt="FitNest Logo" class="block h-auto max-h-10 md:max-h-12 w-auto max-w-[160px] object-contain" />
+        </a>
+        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">About Us</a>
+          <a href="services.html" class="text-sm font-semibold text-emerald-600 font-bold">Our Services</a>
+          <a href="plans.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Training Plans</a>
+          <a href="tips.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Lifestyle Tips</a>
+          <a href="contact.html" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="contact.html" class="bg-emerald-600 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all shadow-md">
+            Book a Session
+          </a>
+        </div>
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg text-gray-800 hover:text-emerald-600" aria-label="Toggle navigation">
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl px-6 py-4 flex flex-col gap-2">
+        <a href="index.html" class="py-2.5 text-sm font-semibold text-gray-700">Home</a>
+        <a href="about.html" class="py-2.5 text-sm font-semibold text-gray-700">About Us</a>
+        <a href="services.html" class="py-2.5 text-sm font-semibold text-emerald-600">Our Services</a>
+        <a href="plans.html" class="py-2.5 text-sm font-semibold text-gray-700">Training Plans</a>
+        <a href="tips.html" class="py-2.5 text-sm font-semibold text-gray-700">Lifestyle Tips</a>
+        <a href="contact.html" class="py-2.5 text-sm font-semibold text-gray-700">Contact</a>
+        <a href="contact.html" class="mt-2 bg-emerald-600 text-white text-sm font-bold px-5 py-3 rounded-full text-center">Book a Session</a>
+      </div>
+    </header>
+
+    <!-- Services Banner -->
+    <section class="pt-36 pb-16 bg-gray-50 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+        <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-100 rounded-full inline-block mb-3">Home Fitness Programs</span>
+        <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
+          Everything You Need to Get Fit at Home
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Personalised, expert-led live video sessions designed around your goals, schedule, and living space.
+        </p>
+      </div>
+    </section>
+
+    <!-- Detailed Services Breakdown -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        <!-- Service 1: Personal Training -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-50">
+            <img src="images/personal-training.jpg" alt="Personal Training 1-on-1" class="w-full h-full object-cover max-h-[440px]" />
+          </div>
+          <div>
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">1-on-1 Live Coaching</span>
+            <h2 class="text-3xl font-black text-gray-900 font-heading mb-4">Personal Training</h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+              Experience the highest level of accountability and personalized instruction. One-on-one live video sessions with a certified trainer tailored entirely to your body, goals, and schedule.
+            </p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-700">
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Tailored workouts matched to your mobility and strength</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Real-time video form analysis to ensure injury prevention</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Dedicated WhatsApp check-ins and recovery coaching</li>
+            </ul>
+            <a href="contact.html?plan=Personal+Training" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all shadow-md">
+              Book a Free Trial Session &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Couple Workouts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-50">
+            <img src="images/couple-workout.jpg" alt="Couple Workouts" class="w-full h-full object-cover max-h-[440px]" />
+          </div>
+          <div class="order-2 lg:order-1">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">Train Together</span>
+            <h2 class="text-3xl font-black text-gray-900 font-heading mb-4">Couple Workouts</h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+              Double your motivation and build a lasting health habit together. Our duo sessions cater to partners with different baseline fitness levels in the same session.
+            </p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-700">
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Dual progressions allowing both partners to train at their optimal pace</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Fun partner challenges that turn fitness into quality bonding time</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Combined household nutrition and meal planning advice</li>
+            </ul>
+            <a href="contact.html?plan=Couple+Workouts" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all shadow-md">
+              Try a Couple Session &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Group Fitness Sessions -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-50">
+            <img src="images/group-fitness.jpg" alt="Group Fitness Sessions" class="w-full h-full object-cover max-h-[440px]" />
+          </div>
+          <div>
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">Community Energy</span>
+            <h2 class="text-3xl font-black text-gray-900 font-heading mb-4">Group Fitness Sessions</h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+              High-energy, fun community workouts led by expert coaches. Stay consistent, feel energized, and feed off the community vibe without leaving home.
+            </p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-700">
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Varied formats: HIIT, core burn, functional strength, and mobility</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Capped session sizes so coaches watch everyone's camera and form</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Highly affordable starting from just ₹899/month</li>
+            </ul>
+            <a href="plans.html" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all shadow-md">
+              View Group Plans &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4: Nutrition & Diet Guidance -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-50">
+            <img src="images/nutrition.jpg" alt="Nutrition and Diet Guidance" class="w-full h-full object-cover max-h-[440px]" />
+          </div>
+          <div class="order-2 lg:order-1">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">Eat Smart</span>
+            <h2 class="text-3xl font-black text-gray-900 font-heading mb-4">Nutrition & Diet Guidance</h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+              Real results come from sustainable eating. No severe calorie cutting or avoiding family dinners — just science-backed Indian meal planning that works.
+            </p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-700">
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Macro calculation based on your metabolic rate and body goal</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Healthy substitutions for roti, rice, paneer, chicken, and dal</li>
+              <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</span> Weekly adjustments to break weight plateaus and keep energy high</li>
+            </ul>
+            <a href="contact.html?plan=Nutrition+Guidance" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all shadow-md">
+              Get Nutrition Consultation &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <img src="images/logo-transparent.png" alt="FitNest" class="h-10 mx-auto sm:mx-0 mb-3" />
+          <p class="text-gray-400 text-sm">Your Home. Your Fitness. Your FitNest.</p>
+        </div>
+        <div class="flex gap-6 text-sm text-gray-400">
+          <a href="index.html" class="hover:text-emerald-400">Home</a>
+          <a href="about.html" class="hover:text-emerald-400">About</a>
+          <a href="plans.html" class="hover:text-emerald-400">Plans</a>
+          <a href="contact.html" class="hover:text-emerald-400">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

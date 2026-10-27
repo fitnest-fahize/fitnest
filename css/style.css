@@ -1,0 +1,239 @@
+/* ==========================================================================
+   FitNest — Custom Stylesheet & Design System
+   Matches https://airo.ai/share/ejMyd3h3aGpodDpjNDA6RHRfSThFS19VR25U
+   ========================================================================== */
+
+:root {
+  --primary: #16a34a;
+  --primary-hover: #15803d;
+  --primary-light: #dcfce7;
+  --secondary: #15803d;
+  --charcoal: #111827;
+  --charcoal-card: #1f2937;
+  --charcoal-dark: #0b0f19;
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: #1f2937;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* ─── WhatsApp Pulsing Ring Animation ─── */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: pulse-ring 2.2s infinite ease-out;
+}
+
+/* ─── Floating WhatsApp Button ─── */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5), 0 8px 10px -6px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08) translateY(-2px);
+  background-color: #22c35e;
+}
+
+/* Tooltip for floating WhatsApp */
+.floating-whatsapp::before {
+  content: "Chat with a Coach";
+  position: absolute;
+  right: 70px;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(8px);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.floating-whatsapp:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── Navbar Transition ─── */
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.header-scrolled .nav-link {
+  color: #374151 !important;
+}
+
+.header-scrolled .nav-link:hover {
+  color: #16a34a !important;
+}
+
+.header-scrolled .nav-link.active {
+  color: #16a34a !important;
+}
+
+.header-scrolled .mobile-menu-btn {
+  color: #1f2937 !important;
+}
+
+.header-scrolled .logo-light {
+  display: none !important;
+}
+
+.header-scrolled .logo-dark {
+  display: block !important;
+}
+
+/* Default state: on hero overlay */
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #4ade80;
+}
+
+/* ─── Card Hover & Image Zoom ─── */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.img-zoom {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .img-zoom {
+  transform: scale(1.05);
+}
+
+/* ─── Interactive Modal ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95) translateY(10px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* ─── Form Elements ─── */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
