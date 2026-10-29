@@ -439,29 +439,43 @@ function initBookingForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = form.querySelector('[name="name"]')?.value || '';
-    const phone = form.querySelector('[name="phone"]')?.value || '';
+    const name = form.querySelector('[name="name"]')?.value.trim() || '';
+    const phone = form.querySelector('[name="phone"]')?.value.trim() || '';
+    const email = form.querySelector('[name="email"]')?.value.trim() || '';
     const goal = form.querySelector('[name="goal"]')?.value || 'General Fitness';
     const plan = form.querySelector('[name="plan"]')?.value || 'Not Specified';
+    const slot = form.querySelector('[name="slot"]')?.value || '';
+    const notes = form.querySelector('[name="notes"]')?.value.trim() || '';
+
+    // Build neatly formatted WhatsApp message
+    let message = `🏋️‍♂️ *New FitNest Consultation Booking*\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `👤 *Name:* ${name}\n`;
+    message += `📞 *Phone:* ${phone}\n`;
+    if (email) message += `📧 *Email:* ${email}\n`;
+    message += `🎯 *Fitness Goal:* ${goal}\n`;
+    message += `📋 *Selected Plan:* ${plan}\n`;
+    if (slot) message += `⏰ *Preferred Slot:* ${slot}\n`;
+    if (notes) message += `📝 *Notes:* ${notes}\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `Hi Coach! I just submitted my booking request on fitnestonline.in. Looking forward to connecting!`;
+
+    const waUrl = `https://wa.me/916238188277?text=${encodeURIComponent(message)}`;
 
     // Show inline success message
     if (successMessage) {
       form.classList.add('hidden');
       successMessage.classList.remove('hidden');
+
+      const waBtn = successMessage.querySelector('a');
+      if (waBtn) {
+        waBtn.href = waUrl;
+        waBtn.textContent = 'Send Details Directly on WhatsApp';
+      }
     }
 
-    // Prepare WhatsApp message
-    const waText = `Hi FitNest Team! I would like to book a Free Discovery Session.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Primary Goal:* ${encodeURIComponent(goal)}%0A*Selected Plan:* ${encodeURIComponent(plan)}`;
-    
-    // Prompt or redirect to WhatsApp
-    const waUrl = `https://wa.me/916238188277?text=${waText}`;
-    
-    setTimeout(() => {
-      const confirmWA = confirm(`Thank you, ${name}! Your booking request is received.\n\nWould you like to instantly connect with our head trainer on WhatsApp to confirm your free slot?`);
-      if (confirmWA) {
-        window.open(waUrl, '_blank');
-      }
-    }, 400);
+    // Instantly launch WhatsApp with pre-filled details
+    window.open(waUrl, '_blank');
   });
 }
 
