@@ -16,62 +16,65 @@
     <link rel="icon" type="image/png" sizes="512x512" href="images/favicon.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180.png?v=2" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fitnestonline.in/" />
-    <meta property="og:title" content="FitNest — Your Home. Your Fitness. Your FitNest." />
-    <meta
-      property="og:description"
-      content="Expert-led online training from the comfort of your home. Live personal training, couple workouts, group sessions, and nutrition guidance."
-    />
-    <meta property="og:image" content="images/hero.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitNest — Your Home. Your Fitness. Your FitNest.</title>
+  <meta name="description"
+    content="FitNest offers expert-led online personal training, couple workouts, group fitness sessions, and nutrition guidance from the comfort of your home. Start your fitness journey today." />
+  <link rel="canonical" href="https://fitnestonline.in" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://fitnestonline.in/" />
-    <meta name="twitter:title" content="FitNest — Your Home. Your Fitness. Your FitNest." />
-    <meta
-      name="twitter:description"
-      content="Expert-led online training from the comfort of your home."
-    />
-    <meta name="twitter:image" content="images/hero.jpg" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fitnestonline.in/" />
+  <meta property="og:title" content="FitNest — Your Home. Your Fitness. Your FitNest." />
+  <meta property="og:description"
+    content="Expert-led online training from the comfort of your home. Live personal training, couple workouts, group sessions, and nutrition guidance." />
+  <meta property="og:image" content="images/hero.jpg" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://fitnestonline.in/" />
+  <meta name="twitter:title" content="FitNest — Your Home. Your Fitness. Your FitNest." />
+  <meta name="twitter:description" content="Expert-led online training from the comfort of your home." />
+  <meta name="twitter:image" content="images/hero.jpg" />
 
-    <!-- Tailwind CSS (CDN for standalone deployment) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#16a34a',
-              'primary-hover': '#15803d',
-              secondary: '#15803d',
-              charcoal: '#111827',
-              'charcoal-card': '#1f2937',
-              muted: '#f9fafb',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              heading: ['Montserrat', 'sans-serif'],
-            },
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN for standalone deployment) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#16a34a',
+            'primary-hover': '#15803d',
+            secondary: '#15803d',
+            charcoal: '#111827',
+            'charcoal-card': '#1f2937',
+            muted: '#f9fafb',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif'],
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -85,388 +88,395 @@
         ]
       }
     </script>
-  </head>
-  <body class="bg-white text-gray-800 antialiased selection:bg-emerald-500 selection:text-white">
-    <!-- ─── HEADER / NAVBAR ─── -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center shrink-0">
-          <!-- Light logo for transparent hero state -->
-          <img
-            src="images/logo-light.png"
-            alt="FitNest Logo"
-            class="logo-light block h-auto max-h-12 md:max-h-14 w-auto object-contain drop-shadow"
-          />
-          <!-- Dark logo for scrolled white header state -->
-          <img
-            src="images/logo-dark.png"
-            alt="FitNest Logo"
-            class="logo-dark hidden h-auto max-h-12 md:max-h-14 w-auto object-contain"
-          />
+</head>
+
+<body class="bg-white text-gray-800 antialiased selection:bg-emerald-500 selection:text-white">
+  <!-- ─── HEADER / NAVBAR ─── -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center shrink-0">
+        <!-- Light logo for transparent hero state -->
+        <img src="images/logo-light.png" alt="FitNest Logo"
+          class="logo-light block h-auto max-h-12 md:max-h-14 w-auto object-contain drop-shadow" />
+        <!-- Dark logo for scrolled white header state -->
+        <img src="images/logo-dark.png" alt="FitNest Logo"
+          class="logo-dark hidden h-auto max-h-12 md:max-h-14 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-semibold active">Home</a>
+        <a href="about.html" data-about-trigger class="nav-link text-sm font-semibold cursor-pointer">About Us</a>
+        <a href="#services" class="nav-link text-sm font-semibold">Our Services</a>
+        <a href="#plans" class="nav-link text-sm font-semibold">Training Plans</a>
+        <a href="#tips" class="nav-link text-sm font-semibold">Lifestyle Tips</a>
+        <a href="#contact" class="nav-link text-sm font-semibold">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#contact"
+          class="bg-emerald-600 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all duration-200 shadow-lg shadow-emerald-600/30 hover:scale-105">
+          Book a Session
         </a>
+      </div>
 
-        <!-- Desktop Navigation -->
-        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-7">
-          <a href="index.html" class="nav-link text-sm font-semibold active">Home</a>
-          <a href="about.html" class="nav-link text-sm font-semibold">About Us</a>
-          <a href="#services" class="nav-link text-sm font-semibold">Our Services</a>
-          <a href="#plans" class="nav-link text-sm font-semibold">Training Plans</a>
-          <a href="#tips" class="nav-link text-sm font-semibold">Lifestyle Tips</a>
-          <a href="#contact" class="nav-link text-sm font-semibold">Contact</a>
-        </nav>
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-toggle"
+        class="mobile-menu-btn lg:hidden p-2 rounded-lg text-white hover:text-emerald-400 transition-colors focus:outline-none"
+        aria-label="Toggle navigation menu">
+        <!-- Menu Icon -->
+        <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Close Icon -->
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
 
-        <!-- Desktop CTA -->
-        <div class="hidden lg:flex items-center gap-3">
-          <a
-            href="#contact"
-            class="bg-emerald-600 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all duration-200 shadow-lg shadow-emerald-600/30 hover:scale-105"
-          >
-            Book a Session
-          </a>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-white border-t border-gray-100 shadow-2xl transition-all duration-300">
+      <nav aria-label="Mobile navigation" class="flex flex-col px-6 py-4 gap-1">
+        <a href="index.html" class="py-3 text-sm font-semibold text-emerald-600 border-b border-gray-100">Home</a>
+        <a href="about.html" data-about-trigger
+          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors cursor-pointer">About
+          Us</a>
+        <a href="#services"
+          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Our
+          Services</a>
+        <a href="#plans"
+          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Training
+          Plans</a>
+        <a href="#tips"
+          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Lifestyle
+          Tips</a>
+        <a href="#contact"
+          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Contact</a>
+        <a href="#contact"
+          class="mt-3 bg-emerald-600 text-white text-sm font-bold px-5 py-3 rounded-full text-center hover:bg-emerald-700 transition-all shadow-md">
+          Book a Session
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── HERO SECTION ─── -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Hero Image -->
+    <img src="images/hero.jpg" alt="Woman doing yoga workout at home"
+      class="absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" />
+    <!-- Dark Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900/75 via-gray-900/65 to-gray-900/85 pointer-events-none">
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-32">
+      <span
+        class="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 backdrop-blur-sm">
+        Live Online Home Training
+      </span>
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 font-heading tracking-tight drop-shadow-md">
+        Your Home. Your Fitness. <br class="hidden sm:inline" />
+        <span class="text-emerald-400">Your FitNest.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow">
+        Expert-led online training from the comfort of your home. Start your fitness journey today with personal
+        coaching and high-energy live sessions.
+      </p>
+
+      <!-- CTA Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-full text-base transition-all duration-200 shadow-xl shadow-emerald-600/30 hover:scale-105">
+          <span>Book a Free Session</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+        <a href="#plans"
+          class="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 font-bold px-8 py-4 rounded-full text-base transition-all duration-200 backdrop-blur-sm hover:scale-105">
+          Explore Plans
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS & TRUST BAR ─── -->
+  <section id="stats" class="py-12 bg-charcoal text-white border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        <!-- Stat 1 -->
+        <div class="flex flex-col items-center pt-4 sm:pt-0">
+          <span
+            class="text-4xl sm:text-5xl font-black mb-1 text-white font-heading tracking-tight flex items-center justify-center">
+            <span data-counter-target="500">0</span>+
+          </span>
+          <span class="text-gray-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Clients Trained</span>
         </div>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button
-          id="mobile-menu-toggle"
-          class="mobile-menu-btn lg:hidden p-2 rounded-lg text-white hover:text-emerald-400 transition-colors focus:outline-none"
-          aria-label="Toggle navigation menu"
-        >
-          <!-- Menu Icon -->
-          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!-- Close Icon -->
-          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <!-- Stat 2 -->
+        <div class="flex flex-col items-center pt-6 sm:pt-0">
+          <span
+            class="text-4xl sm:text-5xl font-black mb-1 text-white font-heading tracking-tight flex items-center justify-center">
+            <span data-counter-target="1000">0</span>+
+          </span>
+          <span class="text-gray-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Sessions
+            Completed</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="flex flex-col items-center pt-6 sm:pt-0">
+          <span
+            class="text-4xl sm:text-5xl font-black mb-1 text-white font-heading tracking-tight flex items-center justify-center">
+            <span data-counter-target="4.9">0.0</span>★
+          </span>
+          <span class="text-gray-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Average Rating</span>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Mobile Navigation Drawer -->
-      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-2xl transition-all duration-300">
-        <nav aria-label="Mobile navigation" class="flex flex-col px-6 py-4 gap-1">
-          <a href="index.html" class="py-3 text-sm font-semibold text-emerald-600 border-b border-gray-100">Home</a>
-          <a href="about.html" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">About Us</a>
-          <a href="#services" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Our Services</a>
-          <a href="#plans" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Training Plans</a>
-          <a href="#tips" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Lifestyle Tips</a>
-          <a href="#contact" class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Contact</a>
-          <a
-            href="#contact"
-            class="mt-3 bg-emerald-600 text-white text-sm font-bold px-5 py-3 rounded-full text-center hover:bg-emerald-700 transition-all shadow-md"
-          >
-            Book a Session
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ─── HERO SECTION ─── -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background Hero Image -->
-      <img
-        src="images/hero.jpg"
-        alt="Woman doing yoga workout at home"
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="eager"
-        fetchpriority="high"
-      />
-      <!-- Dark Gradient Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-b from-gray-900/75 via-gray-900/65 to-gray-900/85 pointer-events-none"></div>
-
-      <!-- Hero Content -->
-      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-32">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 backdrop-blur-sm">
-          Live Online Home Training
-        </span>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 font-heading tracking-tight drop-shadow-md">
-          Your Home. Your Fitness. <br class="hidden sm:inline" />
-          <span class="text-emerald-400">Your FitNest.</span>
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow">
-          Expert-led online training from the comfort of your home. Start your fitness journey today with personal coaching and high-energy live sessions.
+  <!-- ─── SERVICES SECTION ─── -->
+  <section id="services" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span
+          class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Our
+          Offerings</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
+          Everything You Need to Get Fit at Home
+        </h2>
+        <p class="text-gray-500 text-lg leading-relaxed">
+          Personalised, expert-led sessions designed around your schedule and goals.
         </p>
-
-        <!-- CTA Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#contact"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-full text-base transition-all duration-200 shadow-xl shadow-emerald-600/30 hover:scale-105"
-          >
-            <span>Book a Free Session</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-          <a
-            href="#plans"
-            class="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 font-bold px-8 py-4 rounded-full text-base transition-all duration-200 backdrop-blur-sm hover:scale-105"
-          >
-            Explore Plans
-          </a>
-        </div>
       </div>
-    </section>
 
-    <!-- ─── STATS & TRUST BAR ─── -->
-    <section id="stats" class="py-12 bg-charcoal text-white border-y border-white/5">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-          <!-- Stat 1 -->
-          <div class="flex flex-col items-center pt-4 sm:pt-0">
-            <span class="text-4xl sm:text-5xl font-black mb-1 text-white font-heading tracking-tight flex items-center justify-center">
-              <span data-counter-target="500">0</span>+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1: Personal Training -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/personal-training.jpg" alt="Personal Training" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+            <span
+              class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              1-on-1 Live
             </span>
-            <span class="text-gray-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Clients Trained</span>
           </div>
-
-          <!-- Stat 2 -->
-          <div class="flex flex-col items-center pt-6 sm:pt-0">
-            <span class="text-4xl sm:text-5xl font-black mb-1 text-white font-heading tracking-tight flex items-center justify-center">
-              <span data-counter-target="1000">0</span>+
-            </span>
-            <span class="text-gray-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Sessions Completed</span>
-          </div>
-
-          <!-- Stat 3 -->
-          <div class="flex flex-col items-center pt-6 sm:pt-0">
-            <span class="text-4xl sm:text-5xl font-black mb-1 text-white font-heading tracking-tight flex items-center justify-center">
-              <span data-counter-target="4.9">0.0</span>★
-            </span>
-            <span class="text-gray-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Average Rating</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SERVICES SECTION ─── -->
-    <section id="services" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Our Offerings</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
-            Everything You Need to Get Fit at Home
-          </h2>
-          <p class="text-gray-500 text-lg leading-relaxed">
-            Personalised, expert-led sessions designed around your schedule and goals.
-          </p>
-        </div>
-
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Service 1: Personal Training -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/personal-training.jpg"
-                alt="Personal Training"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
-              <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
-                1-on-1 Live
-              </span>
-            </div>
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Personal Training</h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                One-on-one live sessions with a certified trainer tailored entirely to your goals and fitness level.
-              </p>
-              <button
-                data-service-trigger="personal-training"
-                class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5"
-              >
-                Learn More <span aria-hidden="true">&rarr;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 2: Couple Workouts -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/couple-workout.jpg"
-                alt="Couple Workouts"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
-              <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
-                Train Together
-              </span>
-            </div>
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Couple Workouts</h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                Train together, stay motivated together. Shared sessions that make fitness a fun and bonding experience.
-              </p>
-              <button
-                data-service-trigger="couple-workout"
-                class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5"
-              >
-                Learn More <span aria-hidden="true">&rarr;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 3: Group Fitness -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/group-fitness.jpg"
-                alt="Group Fitness Sessions"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
-              <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
-                Community Energy
-              </span>
-            </div>
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Group Fitness Sessions</h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                High-energy community classes led by expert coaches. Affordable, fun, and results-driven.
-              </p>
-              <button
-                data-service-trigger="group-fitness"
-                class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5"
-              >
-                Learn More <span aria-hidden="true">&rarr;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 4: Nutrition & Diet -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/nutrition.jpg"
-                alt="Nutrition & Diet Guidance"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
-              <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
-                Eat Smart
-              </span>
-            </div>
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Nutrition & Diet Guidance</h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                Practical, sustainable eating habits and balanced meal plans crafted for your real Indian lifestyle.
-              </p>
-              <button
-                data-service-trigger="nutrition"
-                class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5"
-              >
-                Learn More <span aria-hidden="true">&rarr;</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── WHY FITNEST SECTION ─── -->
-    <section id="why-fitnest" class="py-24 bg-gray-50 border-t border-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <!-- Image -->
-          <div class="relative order-2 lg:order-1">
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-              <img
-                src="images/why-fitnest.jpg"
-                alt="Personal training session at home"
-                class="w-full h-full object-cover max-h-[500px]"
-                loading="lazy"
-              />
-            </div>
-            <!-- Floating Badge -->
-            <div class="absolute -bottom-6 -right-4 sm:bottom-6 sm:right-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl">
-                ✓
-              </div>
-              <div>
-                <p class="text-xs text-gray-400 font-semibold uppercase">Trained Coaches</p>
-                <p class="font-bold text-gray-900 text-sm">100% Certified Professionals</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Benefits Content -->
-          <div class="order-1 lg:order-2">
-            <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Why Us</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-heading tracking-tight leading-tight">
-              Why 500+ People Choose FitNest
-            </h2>
-            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-              We make fitness convenient, affordable, and genuinely effective — no excuses, no gym commute, just pure results.
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Personal Training</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              One-on-one live sessions with a certified trainer tailored entirely to your goals and fitness level.
             </p>
+            <button data-service-trigger="personal-training"
+              class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5">
+              Learn More <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
 
-            <!-- Benefits List -->
-            <div class="space-y-4 mb-10">
-              <div class="flex items-start gap-3.5">
-                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-base text-gray-700 font-medium">No gym commute — train from anywhere, anytime</span>
-              </div>
+        <!-- Service 2: Couple Workouts -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/couple-workout.jpg" alt="Couple Workouts" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+            <span
+              class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              Train Together
+            </span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Couple Workouts</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              Train together, stay motivated together. Shared sessions that make fitness a fun and bonding experience.
+            </p>
+            <button data-service-trigger="couple-workout"
+              class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5">
+              Learn More <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
 
-              <div class="flex items-start gap-3.5">
-                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-base text-gray-700 font-medium">Certified expert trainers with years of coaching experience</span>
-              </div>
+        <!-- Service 3: Group Fitness -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/group-fitness.jpg" alt="Group Fitness Sessions" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+            <span
+              class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              Community Energy
+            </span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Group Fitness Sessions</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              High-energy community classes led by expert coaches. Affordable, fun, and results-driven.
+            </p>
+            <button data-service-trigger="group-fitness"
+              class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5">
+              Learn More <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
 
-              <div class="flex items-start gap-3.5">
-                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-base text-gray-700 font-medium">Flexible scheduling that fits smoothly into busy professional routines</span>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-base text-gray-700 font-medium">Affordable plans for every budget with zero hidden lock-ins</span>
-              </div>
-            </div>
-
-            <a
-              href="#contact"
-              class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-full text-base transition-all shadow-xl shadow-emerald-600/30 hover:scale-105"
-            >
-              Start Your Free Trial
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
+        <!-- Service 4: Nutrition & Diet -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/nutrition.jpg" alt="Nutrition & Diet Guidance" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+            <span
+              class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              Eat Smart
+            </span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-black text-xl text-gray-900 mb-2 font-heading">Nutrition & Diet Guidance</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              Practical, sustainable eating habits and balanced meal plans crafted for your real Indian lifestyle.
+            </p>
+            <button data-service-trigger="nutrition"
+              class="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2.5">
+              Learn More <span aria-hidden="true">&rarr;</span>
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ─── PRICING PLANS SECTION ─── -->
-    <section id="plans" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Transparent Plans</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
-            Simple, Transparent Pricing
-          </h2>
-          <p class="text-gray-500 text-lg leading-relaxed">
-            Choose the plan that fits your goals. No hidden fees, no long-term lock-ins.
-          </p>
+  <!-- ─── WHY FITNEST SECTION ─── -->
+  <section id="why-fitnest" class="py-24 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Image -->
+        <div class="relative order-2 lg:order-1">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="images/why-fitnest.jpg" alt="Personal training session at home"
+              class="w-full h-full object-cover max-h-[500px]" loading="lazy" />
+          </div>
+          <!-- Floating Badge -->
+          <div
+            class="absolute -bottom-6 -right-4 sm:bottom-6 sm:right-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex items-center gap-3">
+            <div
+              class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl">
+              ✓
+            </div>
+            <div>
+              <p class="text-xs text-gray-400 font-semibold uppercase">Trained Coaches</p>
+              <p class="font-bold text-gray-900 text-sm">100% Certified Professionals</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Plans Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-6">
-          <!-- Plan 1: Starter -->
-          <div class="rounded-3xl border border-gray-200 p-8 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 hover:shadow-xl bg-white">
-            <div>
-              <div class="mb-6">
-                <h3 class="text-2xl font-black text-gray-900 font-heading mb-1">Starter</h3>
-                <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Perfect for beginners</p>
+        <!-- Benefits Content -->
+        <div class="order-1 lg:order-2">
+          <span
+            class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Why
+            Us</span>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-heading tracking-tight leading-tight">
+            Why 500+ People Choose FitNest
+          </h2>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+            We make fitness convenient, affordable, and genuinely effective — no excuses, no gym commute, just pure
+            results.
+          </p>
+
+          <!-- Benefits List -->
+          <div class="space-y-4 mb-10">
+            <div class="flex items-start gap-3.5">
+              <div
+                class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
               </div>
+              <span class="text-base text-gray-700 font-medium">No gym commute — train from anywhere, anytime</span>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div
+                class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-base text-gray-700 font-medium">Certified expert trainers with years of coaching
+                experience</span>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div
+                class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-base text-gray-700 font-medium">Flexible scheduling that fits smoothly into busy
+                professional routines</span>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div
+                class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-base text-gray-700 font-medium">Affordable plans for every budget with zero hidden
+                lock-ins</span>
+            </div>
+          </div>
+
+          <a href="#contact"
+            class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-full text-base transition-all shadow-xl shadow-emerald-600/30 hover:scale-105">
+            Start Your Free Trial
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING PLANS SECTION ─── -->
+  <section id="plans" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span
+          class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Transparent
+          Plans</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 font-heading tracking-tight">
+          Simple, Transparent Pricing
+        </h2>
+        <p class="text-gray-500 text-lg leading-relaxed">
+          Choose the plan that fits your goals. No hidden fees, no long-term lock-ins.
+        </p>
+        </div>
+      </div>
+
+      <!-- Plans Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-6">
+        <!-- Plan 1: Starter -->
+        <div
+          class="rounded-3xl border border-gray-200 p-8 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 hover:shadow-xl bg-white">
+          <div>
+            <div class="mb-6">
+              <h3 class="text-2xl font-black text-gray-900 font-heading mb-1">Starter</h3>
+              <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Perfect for beginners</p>
+            </div>
 
               <div class="flex items-baseline gap-1 mb-8">
                 <span id="price-starter" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹899</span>
@@ -493,76 +503,109 @@
               </ul>
             </div>
 
-            <button
-              onclick="openBookingForPlan('Starter Plan')"
-              class="w-full border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-3.5 px-6 rounded-full text-center transition-all duration-200"
-            >
-              Get Started
-            </button>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>18 group sessions/month</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Basic nutrition guide</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>WhatsApp support</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Progress tracking</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Plan 2: Pro (Featured / Popular) -->
-          <div class="relative rounded-3xl border-2 border-emerald-600 p-8 flex flex-col justify-between shadow-2xl bg-white md:-translate-y-4">
-            <!-- Popular Badge -->
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-black uppercase tracking-widest py-1.5 px-4 rounded-full shadow-lg">
-              Most Popular
-            </div>
+          <button onclick="openBookingForPlan('Starter Plan')"
+            class="w-full border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-3.5 px-6 rounded-full text-center transition-all duration-200">
+            Get Started
+          </button>
+        </div>
 
-            <div>
-              <div class="mb-6">
-                <h3 class="text-2xl font-black text-gray-900 font-heading mb-1">Pro</h3>
-                <p class="text-xs text-emerald-600 uppercase tracking-wider font-semibold">Best for fast transformations</p>
-              </div>
-
-              <div class="flex items-baseline gap-1 mb-8">
-                <span id="price-pro" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹3999</span>
-                <span class="pricing-period text-gray-500 text-sm font-medium">/month</span>
-              </div>
-
-              <ul class="space-y-4 mb-8">
-                <li class="flex items-start gap-3 text-sm text-gray-700">
-                  <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span class="font-semibold text-gray-900">22 live workout sessions/month</span>
-                </li>
-                <li class="flex items-start gap-3 text-sm text-gray-700">
-                  <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Custom meal plan</span>
-                </li>
-                <li class="flex items-start gap-3 text-sm text-gray-700">
-                  <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Priority WhatsApp support</span>
-                </li>
-                <li class="flex items-start gap-3 text-sm text-gray-700">
-                  <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Weekly check-ins</span>
-                </li>
-                <li class="flex items-start gap-3 text-sm text-gray-700">
-                  <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Initial fitness assessment</span>
-                </li>
-              </ul>
-            </div>
-
-            <button
-              onclick="openBookingForPlan('Pro Plan')"
-              class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-full text-center transition-all duration-200 shadow-xl shadow-emerald-600/30 hover:scale-105"
-            >
-              Get Started
-            </button>
+        <!-- Plan 2: Pro (Featured / Popular) -->
+        <div
+          class="relative rounded-3xl border-2 border-emerald-600 p-8 flex flex-col justify-between shadow-2xl bg-white md:-translate-y-4">
+          <!-- Popular Badge -->
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-black uppercase tracking-widest py-1.5 px-4 rounded-full shadow-lg">
+            Most Popular
           </div>
 
-          <!-- Plan 3: Elite -->
-          <div class="rounded-3xl border border-gray-200 p-8 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 hover:shadow-xl bg-white">
-            <div>
-              <div class="mb-6">
-                <h3 class="text-2xl font-black text-gray-900 font-heading mb-1">Elite</h3>
-                <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Ultimate personal coaching</p>
-              </div>
+          <div>
+            <div class="mb-6">
+              <h3 class="text-2xl font-black text-gray-900 font-heading mb-1">Pro</h3>
+              <p class="text-xs text-emerald-600 uppercase tracking-wider font-semibold">Best for fast transformations
+              </p>
+            </div>
 
-              <div class="flex items-baseline gap-1 mb-8">
-                <span id="price-elite" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹5,999</span>
-                <span class="pricing-period text-gray-500 text-sm font-medium">/month</span>
-              </div>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span id="price-pro" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹3999</span>
+              <span class="pricing-period text-gray-500 text-sm font-medium">/month</span>
+            </div>
+
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-semibold text-gray-900">22 live workout sessions/month</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Custom meal plan</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Priority WhatsApp support</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Weekly check-ins</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Initial fitness assessment</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openBookingForPlan('Pro Plan')"
+            class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-full text-center transition-all duration-200 shadow-xl shadow-emerald-600/30 hover:scale-105">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Plan 3: Elite -->
+        <div
+          class="rounded-3xl border border-gray-200 p-8 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 hover:shadow-xl bg-white">
+          <div>
+            <div class="mb-6">
+              <h3 class="text-2xl font-black text-gray-900 font-heading mb-1">Elite</h3>
+              <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Ultimate personal coaching</p>
+            </div>
 
               <ul class="space-y-4 mb-8">
                 <li class="flex items-start gap-3 text-sm text-gray-700">
@@ -592,534 +635,538 @@
               </ul>
             </div>
 
-            <button
-              onclick="openBookingForPlan('Elite Plan')"
-              class="w-full border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-3.5 px-6 rounded-full text-center transition-all duration-200"
-            >
-              Get Started
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>22 sessions/month</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>General nutrition guidance</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Priority WhatsApp support</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Weekly check-ins</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Couple / duo sessions</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Monthly body assessment</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openBookingForPlan('Elite Plan')"
+            class="w-full border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-3.5 px-6 rounded-full text-center transition-all duration-200">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS SECTION ─── -->
+  <section class="py-24 bg-charcoal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span
+          class="text-emerald-400 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-950 rounded-full inline-block mb-3 border border-emerald-800/40">Member
+          Stories</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 font-heading tracking-tight">
+          Real People. Real Results.
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Thousands of Indians are transforming their health from home with FitNest.
+        </p>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-gray-800/60 border border-gray-700/60 rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm">
+          <div>
+            <!-- 5 Stars -->
+            <div class="flex items-center gap-1 text-amber-400 mb-6">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-gray-300 text-base leading-relaxed italic mb-8">
+              "FitNest completely changed my routine. I lost 8 kg in 3 months without stepping into a gym. My trainer is
+              incredible and so attentive to form!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-700/60">
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
+              PS
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Priya Sharma</h4>
+              <p class="text-xs text-gray-400">Mumbai, Maharashtra</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-gray-800/60 border border-gray-700/60 rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm">
+          <div>
+            <!-- 5 Stars -->
+            <div class="flex items-center gap-1 text-amber-400 mb-6">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-gray-300 text-base leading-relaxed italic mb-8">
+              "We started couple workouts and it's been the best decision. We're fitter, have way more energy, and our
+              bond is stronger. Highly recommend to any couple!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-700/60">
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
+              RN
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Rahul & Neha Verma</h4>
+              <p class="text-xs text-gray-400">Bangalore, Karnataka</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-gray-800/60 border border-gray-700/60 rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm">
+          <div>
+            <!-- 5 Stars -->
+            <div class="flex items-center gap-1 text-amber-400 mb-6">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-gray-300 text-base leading-relaxed italic mb-8">
+              "The nutrition guidance alone was worth it. I finally understand how to eat right without starving. The
+              group sessions in the morning are so energetic!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-700/60">
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
+              AM
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Arjun Mehta</h4>
+              <p class="text-xs text-gray-400">Delhi NCR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LIFESTYLE TIPS SECTION ─── -->
+  <section id="tips" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <span
+            class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Coach
+            Advice</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 font-heading tracking-tight">
+            Healthy Lifestyle Tips
+          </h2>
+          <p class="text-gray-500 text-lg mt-2">
+            Expert advice on nutrition, workouts, and wellness — straight from our coaches.
+          </p>
+        </div>
+        <a href="tips.html"
+          class="inline-flex items-center gap-1.5 font-bold text-sm text-emerald-600 hover:text-emerald-700 hover:gap-2.5 transition-all self-start md:self-auto">
+          View All Tips <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Tips Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Tip 1 -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/tips-nutrition.jpg" alt="High-protein meals" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span
+              class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-green-100 text-green-700 self-start">
+              Nutrition
+            </span>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading leading-snug">
+              5 Easy High-Protein Meals You Can Make in 15 Minutes
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              Fuel your workouts without spending hours in the kitchen. These quick recipes are packed with protein.
+            </p>
+            <button data-tip-trigger="tip-1"
+              class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2">
+              Read More <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tip 2 -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/tips-workout.jpg" alt="20-minute HIIT routine" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span
+              class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-orange-100 text-orange-700 self-start">
+              Workout
+            </span>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading leading-snug">
+              The 20-Minute Home HIIT Routine That Actually Works
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              No equipment needed. This science-backed routine burns fat and builds endurance in just 20 minutes a day.
+            </p>
+            <button data-tip-trigger="tip-2"
+              class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2">
+              Read More <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tip 3 -->
+        <div
+          class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+          <div class="relative overflow-hidden h-52">
+            <img src="images/tips-wellness.jpg" alt="Sleep recovery" class="w-full h-full object-cover img-zoom"
+              loading="lazy" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span
+              class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-blue-100 text-blue-700 self-start">
+              Wellness
+            </span>
+            <h3 class="font-black text-lg text-gray-900 mb-2 font-heading leading-snug">
+              Why Sleep Is Your Most Powerful Recovery Tool
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+              Your muscles grow while you sleep. Here's how to optimise your rest for maximum fitness gains.
+            </p>
+            <button data-tip-trigger="tip-3"
+              class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2">
+              Read More <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ─── TESTIMONIALS SECTION ─── -->
-    <section class="py-24 bg-charcoal text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-950 rounded-full inline-block mb-3 border border-emerald-800/40">Member Stories</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 font-heading tracking-tight">
-            Real People. Real Results.
-          </h2>
-          <p class="text-gray-400 text-lg leading-relaxed">
-            Thousands of Indians are transforming their health from home with FitNest.
-          </p>
-        </div>
+  <!-- ─── WHATSAPP CTA SECTION ─── -->
+  <section class="py-20 bg-emerald-700 text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight font-heading">
+        Have Questions? Chat With Us on WhatsApp!
+      </h2>
+      <p class="text-white/85 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        Our coaches are ready to answer your questions, help you choose the right plan, and get you started today.
+      </p>
 
-        <!-- Testimonial Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Card 1 -->
-          <div class="bg-gray-800/60 border border-gray-700/60 rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm">
-            <div>
-              <!-- 5 Stars -->
-              <div class="flex items-center gap-1 text-amber-400 mb-6">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p class="text-gray-300 text-base leading-relaxed italic mb-8">
-                "FitNest completely changed my routine. I lost 8 kg in 3 months without stepping into a gym. My trainer is incredible and so attentive to form!"
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-gray-700/60">
-              <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
-                PS
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Priya Sharma</h4>
-                <p class="text-xs text-gray-400">Mumbai, Maharashtra</p>
-              </div>
-            </div>
-          </div>
+      <a href="https://wa.me/916238188277" target="_blank" rel="noopener noreferrer"
+        class="whatsapp-pulse inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 py-5 rounded-full text-lg transition-colors shadow-2xl hover:scale-105">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </section>
 
-          <!-- Card 2 -->
-          <div class="bg-gray-800/60 border border-gray-700/60 rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm">
-            <div>
-              <!-- 5 Stars -->
-              <div class="flex items-center gap-1 text-amber-400 mb-6">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p class="text-gray-300 text-base leading-relaxed italic mb-8">
-                "We started couple workouts and it's been the best decision. We're fitter, have way more energy, and our bond is stronger. Highly recommend to any couple!"
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-gray-700/60">
-              <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
-                RN
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Rahul & Neha Verma</h4>
-                <p class="text-xs text-gray-400">Bangalore, Karnataka</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="bg-gray-800/60 border border-gray-700/60 rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm">
-            <div>
-              <!-- 5 Stars -->
-              <div class="flex items-center gap-1 text-amber-400 mb-6">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p class="text-gray-300 text-base leading-relaxed italic mb-8">
-                "The nutrition guidance alone was worth it. I finally understand how to eat right without starving. The group sessions in the morning are so energetic!"
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-gray-700/60">
-              <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
-                AM
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Arjun Mehta</h4>
-                <p class="text-xs text-gray-400">Delhi NCR</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- ─── BOOKING & CONSULTATION FORM SECTION ─── -->
+  <section id="contact" class="py-24 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span
+          class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Book
+          Your Slot</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-3 font-heading tracking-tight">
+          Book a Free 30-Minute Discovery Call
+        </h2>
+        <p class="text-gray-600 text-base leading-relaxed">
+          Meet your coach, discuss your goals, and experience how home fitness will work for you.
+        </p>
       </div>
-    </section>
 
-    <!-- ─── LIFESTYLE TIPS SECTION ─── -->
-    <section id="tips" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-          <div>
-            <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Coach Advice</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 font-heading tracking-tight">
-              Healthy Lifestyle Tips
-            </h2>
-            <p class="text-gray-500 text-lg mt-2">
-              Expert advice on nutrition, workouts, and wellness — straight from our coaches.
-            </p>
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100">
+        <!-- Form Success State -->
+        <div id="booking-success-message" class="hidden text-center py-8">
+          <div
+            class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+            ✓
           </div>
-          <a
-            href="tips.html"
-            class="inline-flex items-center gap-1.5 font-bold text-sm text-emerald-600 hover:text-emerald-700 hover:gap-2.5 transition-all self-start md:self-auto"
-          >
-            View All Tips <span aria-hidden="true">&rarr;</span>
+          <h3 class="text-2xl font-black text-gray-900 mb-2 font-heading">Booking Request Received!</h3>
+          <p class="text-gray-600 max-w-md mx-auto mb-6">
+            Our head coach will reach out to you within 2 business hours via WhatsApp to confirm your free video slot.
+          </p>
+          <a href="https://wa.me/916238188277" target="_blank"
+            class="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-full hover:bg-emerald-700 transition-colors">
+            Message Us Now on WhatsApp
           </a>
         </div>
 
-        <!-- Tips Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Tip 1 -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/tips-nutrition.jpg"
-                alt="High-protein meals"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
+        <!-- Actual Form -->
+        <form id="booking-form" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Full Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Priya Sharma" class="form-input" />
             </div>
-            <div class="p-6 flex flex-col flex-1">
-              <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-green-100 text-green-700 self-start">
-                Nutrition
-              </span>
-              <h3 class="font-black text-lg text-gray-900 mb-2 font-heading leading-snug">
-                5 Easy High-Protein Meals You Can Make in 15 Minutes
-              </h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                Fuel your workouts without spending hours in the kitchen. These quick recipes are packed with protein.
-              </p>
-              <button
-                data-tip-trigger="tip-1"
-                class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2"
-              >
-                Read More <span aria-hidden="true">&rarr;</span>
-              </button>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">WhatsApp / Phone Number
+                *</label>
+              <input type="tel" name="phone" required placeholder="e.g. +91 98765 43210" class="form-input" />
             </div>
           </div>
 
-          <!-- Tip 2 -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/tips-workout.jpg"
-                alt="20-minute HIIT routine"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Email Address</label>
+              <input type="email" name="email" placeholder="e.g. priya@gmail.com" class="form-input" />
             </div>
-            <div class="p-6 flex flex-col flex-1">
-              <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-orange-100 text-orange-700 self-start">
-                Workout
-              </span>
-              <h3 class="font-black text-lg text-gray-900 mb-2 font-heading leading-snug">
-                The 20-Minute Home HIIT Routine That Actually Works
-              </h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                No equipment needed. This science-backed routine burns fat and builds endurance in just 20 minutes a day.
-              </p>
-              <button
-                data-tip-trigger="tip-2"
-                class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2"
-              >
-                Read More <span aria-hidden="true">&rarr;</span>
-              </button>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Preferred Program /
+                Plan</label>
+              <select id="booking-plan-select" name="plan" class="form-input cursor-pointer">
+                <option value="Personal Training (1-on-1)">Personal Training (1-on-1 Live)</option>
+                <option value="Couple Workouts">Couple Workouts (Duo Fitness)</option>
+                <option value="Group Fitness Sessions">Group Fitness Sessions</option>
+                <option value="Nutrition Guidance">Nutrition & Diet Guidance</option>
+                <option value="Pro Plan (₹3,999/mo)">Pro Plan (₹3,999/month)</option>
+                <option value="Starter Plan (₹899/mo)">Starter Plan (₹899/month)</option>
+                <option value="Elite Plan (₹5,999/mo)">Elite Plan (₹5,999/month)</option>
+              </select>
             </div>
           </div>
 
-          <!-- Tip 3 -->
-          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
-            <div class="relative overflow-hidden h-52">
-              <img
-                src="images/tips-wellness.jpg"
-                alt="Sleep recovery"
-                class="w-full h-full object-cover img-zoom"
-                loading="lazy"
-              />
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Primary Fitness
+                Goal</label>
+              <select name="goal" class="form-input cursor-pointer">
+                <option value="Weight Loss & Fat Reduction">Weight Loss & Fat Reduction</option>
+                <option value="Strength & Muscle Building">Strength & Muscle Tone</option>
+                <option value="Posture & Flexibility">Flexibility, Yoga & Posture</option>
+                <option value="Postnatal Fitness">Postnatal Recovery</option>
+                <option value="General Health & Stamina">General Health & Stamina</option>
+              </select>
             </div>
-            <div class="p-6 flex flex-col flex-1">
-              <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-blue-100 text-blue-700 self-start">
-                Wellness
-              </span>
-              <h3 class="font-black text-lg text-gray-900 mb-2 font-heading leading-snug">
-                Why Sleep Is Your Most Powerful Recovery Tool
-              </h3>
-              <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                Your muscles grow while you sleep. Here's how to optimise your rest for maximum fitness gains.
-              </p>
-              <button
-                data-tip-trigger="tip-3"
-                class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-all self-start group-hover:gap-2"
-              >
-                Read More <span aria-hidden="true">&rarr;</span>
-              </button>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Preferred Time
+                Slot</label>
+              <select name="slot" class="form-input cursor-pointer">
+                <option value="Morning (6:00 AM - 9:00 AM)">Morning (6:00 AM - 9:00 AM)</option>
+                <option value="Mid-day (10:00 AM - 1:00 PM)">Mid-day (10:00 AM - 1:00 PM)</option>
+                <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM)</option>
+              </select>
             </div>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-full text-base transition-all duration-200 shadow-xl shadow-emerald-600/30 hover:scale-[1.01]">
+            Submit & Connect with Coach
+          </button>
+          <p class="text-xs text-center text-gray-400 mt-2">
+            🔒 No spam, ever. Your information is 100% confidential and secure.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="bg-charcoal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Brand Column -->
+        <div class="lg:col-span-1">
+          <a href="index.html" class="inline-block mb-4">
+            <img src="images/logo-light.png" alt="FitNest" class="block h-auto max-h-16 w-auto object-contain" />
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4 font-semibold">
+            Your Home. Your Fitness. Your FitNest.
+          </p>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Expert-led online training that fits your life — no gym required.
+          </p>
+
+          <!-- Social Media Icons -->
+          <div class="flex items-center gap-3 mt-6">
+            <a href="https://www.instagram.com/fit_nest___?srtk=MXEwbnRoZTFlOHBpeQ==" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram"
+              class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/share/1Cb2oY6Z8r/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook"
+              class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
           </div>
         </div>
+
+        <!-- Services Links -->
+        <div>
+          <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Personal
+                Training</a></li>
+            <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Couple
+                Workouts</a></li>
+            <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Group
+                Fitness</a></li>
+            <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Nutrition
+                Guidance</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="about.html" data-about-trigger class="text-gray-400 text-sm hover:text-emerald-400 transition-colors cursor-pointer">About Us</a>
+            </li>
+            <li><a href="#plans" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Training
+                Plans</a></li>
+            <li><a href="#tips" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Lifestyle
+                Tips</a></li>
+            <li><a href="#contact" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div>
+          <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact Us</h3>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li>
+              <a href="mailto:homeworkout@fitnesonline.in" class="hover:text-emerald-400 transition-colors">
+                homeworkout@fitnesonline.in
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/916238188277" target="_blank" rel="noopener noreferrer"
+                class="hover:text-emerald-400 transition-colors">
+                WhatsApp: +91 62381 88277
+              </a>
+            </li>
+            <li class="text-gray-500">fitnestonline.in</li>
+          </ul>
+          <a href="https://wa.me/916238188277" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 mt-5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
       </div>
-    </section>
 
-    <!-- ─── WHATSAPP CTA SECTION ─── -->
-    <section class="py-20 bg-emerald-700 text-white text-center">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight font-heading">
-          Have Questions? Chat With Us on WhatsApp!
-        </h2>
-        <p class="text-white/85 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-          Our coaches are ready to answer your questions, help you choose the right plan, and get you started today.
-        </p>
-
-        <a
-          href="https://wa.me/916238188277"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="whatsapp-pulse inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 py-5 rounded-full text-lg transition-colors shadow-2xl hover:scale-105"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Chat on WhatsApp
-        </a>
+      <!-- Bottom Copyright Bar -->
+      <div
+        class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p>© 2026 FitNest. All rights reserved. | fitnestonline.in</p>
+        <div class="flex gap-6">
+          <a href="about.html" data-about-trigger class="hover:text-gray-300 transition-colors cursor-pointer">About Us</a>
+          <a href="#services" class="hover:text-gray-300 transition-colors">Services</a>
+          <a href="#plans" class="hover:text-gray-300 transition-colors">Plans</a>
+          <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
+        </div>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- ─── BOOKING & CONSULTATION FORM SECTION ─── -->
-    <section id="contact" class="py-24 bg-gray-50 border-t border-gray-100">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-emerald-50 rounded-full inline-block mb-3">Book Your Slot</span>
-          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-3 font-heading tracking-tight">
-            Book a Free 30-Minute Discovery Call
-          </h2>
-          <p class="text-gray-600 text-base leading-relaxed">
-            Meet your coach, discuss your goals, and experience how home fitness will work for you.
+  <!-- ─── FLOATING WHATSAPP BUTTON ─── -->
+  <a href="https://wa.me/916238188277" target="_blank" rel="noopener noreferrer" class="floating-whatsapp"
+    aria-label="Chat with FitNest coach on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- ─── GLOBAL MODAL CONTAINER (Services & Tips details) ─── -->
+  <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content relative">
+      <button id="modal-close-btn"
+        class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition-colors"
+        aria-label="Close modal">
+        ✕
+      </button>
+      <div id="modal-body-container"></div>
+    </div>
+  </div>
+
+  <!-- ─── COOKIE CONSENT BANNER ─── -->
+  <div id="cookie-consent-banner"
+    class="hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl" role="alertdialog"
+    aria-label="Cookie consent banner">
+    <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex-1">
+          <h3 class="text-sm font-bold text-gray-900 mb-1 font-heading">Cookie Consent</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            We use cookies to enable essential services and functionality on our site and to analyze performance so we
+            can provide you with the best fitness experience.
           </p>
         </div>
-
-        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100">
-          <!-- Form Success State -->
-          <div id="booking-success-message" class="hidden text-center py-8">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-              ✓
-            </div>
-            <h3 class="text-2xl font-black text-gray-900 mb-2 font-heading">Booking Request Received!</h3>
-            <p class="text-gray-600 max-w-md mx-auto mb-6">
-              Our head coach will reach out to you within 2 business hours via WhatsApp to confirm your free video slot.
-            </p>
-            <a
-              href="https://wa.me/916238188277"
-              target="_blank"
-              class="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-full hover:bg-emerald-700 transition-colors"
-            >
-              Message Us Now on WhatsApp
-            </a>
-          </div>
-
-          <!-- Actual Form -->
-          <form id="booking-form" class="space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Full Name *</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="e.g. Priya Sharma"
-                  class="form-input"
-                />
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">WhatsApp / Phone Number *</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  placeholder="e.g. +91 98765 43210"
-                  class="form-input"
-                />
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="e.g. priya@gmail.com"
-                  class="form-input"
-                />
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Preferred Program / Plan</label>
-                <select id="booking-plan-select" name="plan" class="form-input cursor-pointer">
-                  <option value="Personal Training (1-on-1)">Personal Training (1-on-1 Live)</option>
-                  <option value="Couple Workouts">Couple Workouts (Duo Fitness)</option>
-                  <option value="Group Fitness Sessions">Group Fitness Sessions</option>
-                  <option value="Nutrition Guidance">Nutrition & Diet Guidance</option>
-                  <option value="Pro Plan (₹3,999/mo)">Pro Plan (₹3,999/month)</option>
-                  <option value="Starter Plan (₹899/mo)">Starter Plan (₹899/month)</option>
-                  <option value="Elite Plan (₹5,999/mo)">Elite Plan (₹5,999/month)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Primary Fitness Goal</label>
-                <select name="goal" class="form-input cursor-pointer">
-                  <option value="Weight Loss & Fat Reduction">Weight Loss & Fat Reduction</option>
-                  <option value="Strength & Muscle Building">Strength & Muscle Tone</option>
-                  <option value="Posture & Flexibility">Flexibility, Yoga & Posture</option>
-                  <option value="Postnatal Fitness">Postnatal Recovery</option>
-                  <option value="General Health & Stamina">General Health & Stamina</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Preferred Time Slot</label>
-                <select name="slot" class="form-input cursor-pointer">
-                  <option value="Morning (6:00 AM - 9:00 AM)">Morning (6:00 AM - 9:00 AM)</option>
-                  <option value="Mid-day (10:00 AM - 1:00 PM)">Mid-day (10:00 AM - 1:00 PM)</option>
-                  <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM)</option>
-                </select>
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-full text-base transition-all duration-200 shadow-xl shadow-emerald-600/30 hover:scale-[1.01]"
-            >
-              Submit & Connect with Coach
-            </button>
-            <p class="text-xs text-center text-gray-400 mt-2">
-              🔒 No spam, ever. Your information is 100% confidential and secure.
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── FOOTER ─── -->
-    <footer class="bg-charcoal text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <!-- Brand Column -->
-          <div class="lg:col-span-1">
-            <a href="index.html" class="inline-block mb-4">
-              <img
-                src="images/logo-light.png"
-                alt="FitNest"
-                class="block h-auto max-h-16 w-auto object-contain"
-              />
-            </a>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4 font-semibold">
-              Your Home. Your Fitness. Your FitNest.
-            </p>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Expert-led online training that fits your life — no gym required.
-            </p>
-
-            <!-- Social Media Icons -->
-            <div class="flex items-center gap-3 mt-6">
-              <a
-                href="https://www.instagram.com/fit_nest___?srtk=MXEwbnRoZTFlOHBpeQ=="
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              </a>
-              <a
-                href="https://www.facebook.com/share/1Cb2oY6Z8r/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-600 transition-colors"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Services Links -->
-          <div>
-            <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
-            <ul class="space-y-3">
-              <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Personal Training</a></li>
-              <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Couple Workouts</a></li>
-              <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Group Fitness</a></li>
-              <li><a href="#services" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Nutrition Guidance</a></li>
-            </ul>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h3>
-            <ul class="space-y-3">
-              <li><a href="about.html" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">About Us</a></li>
-              <li><a href="#plans" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Training Plans</a></li>
-              <li><a href="#tips" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Lifestyle Tips</a></li>
-              <li><a href="#contact" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Us -->
-          <div>
-            <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact Us</h3>
-            <ul class="space-y-3 text-sm text-gray-400">
-              <li>
-                <a href="mailto:homeworkout@fitnesonline.in" class="hover:text-emerald-400 transition-colors">
-                  homeworkout@fitnesonline.in
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/916238188277"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-emerald-400 transition-colors"
-                >
-                  WhatsApp: +91 62381 88277
-                </a>
-              </li>
-              <li class="text-gray-500">fitnestonline.in</li>
-            </ul>
-            <a
-              href="https://wa.me/916238188277"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 mt-5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <!-- Bottom Copyright Bar -->
-        <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-          <p>© 2026 FitNest. All rights reserved. | fitnestonline.in</p>
-          <div class="flex gap-6">
-            <a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a>
-            <a href="#services" class="hover:text-gray-300 transition-colors">Services</a>
-            <a href="#plans" class="hover:text-gray-300 transition-colors">Plans</a>
-            <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- ─── FLOATING WHATSAPP BUTTON ─── -->
-    <a
-      href="https://wa.me/916238188277"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="floating-whatsapp"
-      aria-label="Chat with FitNest coach on WhatsApp"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-      </svg>
-    </a>
-
-    <!-- ─── GLOBAL MODAL CONTAINER (Services & Tips details) ─── -->
-    <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true">
-      <div class="modal-content relative">
-        <button
-          id="modal-close-btn"
-          class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition-colors"
-          aria-label="Close modal"
-        >
-          ✕
-        </button>
-        <div id="modal-body-container"></div>
-      </div>
-    </div>
-
-    <!-- ─── COOKIE CONSENT BANNER ─── -->
-    <div
-      id="cookie-consent-banner"
-      class="hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl"
-      role="alertdialog"
-      aria-label="Cookie consent banner"
-    >
-      <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex-1">
-            <h3 class="text-sm font-bold text-gray-900 mb-1 font-heading">Cookie Consent</h3>
-            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              We use cookies to enable essential services and functionality on our site and to analyze performance so we can provide you with the best fitness experience.
-            </p>
-          </div>
-          <div class="flex items-center gap-3 shrink-0">
-            <button
-              id="cookie-decline"
-              class="px-4 py-2 border border-gray-300 text-gray-700 text-xs sm:text-sm font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              Decline
-            </button>
-            <button
-              id="cookie-accept"
-              class="px-5 py-2 bg-emerald-600 text-white text-xs sm:text-sm font-bold rounded-lg hover:bg-emerald-700 transition-colors shadow-md"
-            >
-              Accept All
-            </button>
-          </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="cookie-decline"
+            class="px-4 py-2 border border-gray-300 text-gray-700 text-xs sm:text-sm font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+            Decline
+          </button>
+          <button id="cookie-accept"
+            class="px-5 py-2 bg-emerald-600 text-white text-xs sm:text-sm font-bold rounded-lg hover:bg-emerald-700 transition-colors shadow-md">
+            Accept All
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
-
