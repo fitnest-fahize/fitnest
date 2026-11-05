@@ -14,6 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
 });
 
+// Global delegated click listener for about and privacy modals
+document.addEventListener('click', function(e) {
+  const privacyTrigger = e.target.closest('a[href="#privacy"], [data-open-privacy]');
+  if (privacyTrigger) {
+    e.preventDefault();
+    if (typeof window.openPrivacyModal === 'function') {
+      window.openPrivacyModal();
+    }
+    return;
+  }
+  const aboutTrigger = e.target.closest('a[href="#about"], [data-open-about]');
+  if (aboutTrigger) {
+    e.preventDefault();
+    if (typeof window.openAboutModal === 'function') {
+      window.openAboutModal();
+    }
+    return;
+  }
+});
+
 /* ─── 1. Navbar Scroll Effect ─── */
 function initNavbar() {
   const header = document.querySelector('header');
@@ -439,6 +459,10 @@ window.closeModal = function() {
   const modalOverlay = document.getElementById('global-modal');
   if (modalOverlay) {
     modalOverlay.classList.remove('active');
+    modalOverlay.style.display = '';
+    modalOverlay.style.visibility = '';
+    modalOverlay.style.opacity = '';
+    modalOverlay.style.pointerEvents = '';
   }
   document.body.style.overflow = '';
 };
@@ -546,6 +570,10 @@ window.openAboutModal = function() {
   `;
 
   modalOverlay.classList.add('active');
+  modalOverlay.style.display = 'flex';
+  modalOverlay.style.visibility = 'visible';
+  modalOverlay.style.opacity = '1';
+  modalOverlay.style.pointerEvents = 'auto';
   document.body.style.overflow = 'hidden';
 
   // Auto-close mobile drawer if open
@@ -765,6 +793,10 @@ window.openPrivacyModal = function() {
   `;
 
   modalOverlay.classList.add('active');
+  modalOverlay.style.display = 'flex';
+  modalOverlay.style.visibility = 'visible';
+  modalOverlay.style.opacity = '1';
+  modalOverlay.style.pointerEvents = 'auto';
   document.body.style.overflow = 'hidden';
 
   // Auto-close mobile drawer if open

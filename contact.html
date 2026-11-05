@@ -229,7 +229,7 @@
           <a href="about.html" class="hover:text-emerald-400">About</a>
           <a href="services.html" class="hover:text-emerald-400">Services</a>
           <a href="plans.html" class="hover:text-emerald-400">Plans</a>
-          <a href="#privacy" onclick="event.preventDefault();openPrivacyModal()" class="hover:text-emerald-400">Privacy Policy</a>
+          <a href="privacy.html" onclick="if(window.openPrivacyModal){event.preventDefault();window.openPrivacyModal();return false;}" class="hover:text-emerald-400">Privacy Policy</a>
         </div>
       </div>
     </footer>
@@ -245,7 +245,7 @@
       </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=5.0"></script>
     <script>
       // Support preselecting plan from query parameters
       const urlParams = new URLSearchParams(window.location.search);

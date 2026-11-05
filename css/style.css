@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 60;
+  z-index: 9999;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
   display: flex;
@@ -177,12 +177,15 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   padding: 1rem;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: all 0.25s ease;
 }
 
 .modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .modal-content {
