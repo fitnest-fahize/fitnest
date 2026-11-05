@@ -414,10 +414,22 @@ function initModals() {
     });
   });
 
-  // Open automatically if loaded with #about
+  // Connect all Privacy Policy links across footer and pages to the responsive card window
+  document.querySelectorAll('a[href="#privacy"], a[href="privacy.html"], [data-open-privacy]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.openPrivacyModal();
+    });
+  });
+
+  // Open automatically if loaded with #about or #privacy
   if (window.location.hash === '#about') {
     setTimeout(() => {
       window.openAboutModal();
+    }, 150);
+  } else if (window.location.hash === '#privacy') {
+    setTimeout(() => {
+      window.openPrivacyModal();
     }, 150);
   }
 }
@@ -474,7 +486,10 @@ window.openAboutModal = function() {
 
   const modalBody = modalOverlay.querySelector('#modal-body-container');
   const modalContent = modalOverlay.querySelector('.modal-content');
-  if (modalContent) modalContent.classList.add('modal-large');
+  if (modalContent) {
+    modalContent.classList.add('modal-large');
+    modalContent.style.maxWidth = '';
+  }
 
   modalBody.innerHTML = `
     <div class="p-6 sm:p-8 md:p-10 text-left">
@@ -523,6 +538,225 @@ window.openAboutModal = function() {
         <p class="text-xs sm:text-sm font-bold text-emerald-800 font-heading text-center sm:text-left">
           Fitnest — Your Health, Your Fitness, Your Fitnest.
         </p>
+        <button onclick="closeModal()" type="button" class="w-full sm:w-auto bg-gray-900 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-colors shadow text-center cursor-pointer">
+          Close
+        </button>
+      </div>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Auto-close mobile drawer if open
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.add('hidden');
+    if (iconMenu) iconMenu.classList.remove('hidden');
+    if (iconClose) iconClose.classList.add('hidden');
+  }
+};
+
+// Global helper to open responsive Privacy Policy & Terms card window
+window.openPrivacyModal = function() {
+  let modalOverlay = document.getElementById('global-modal');
+  if (!modalOverlay) {
+    modalOverlay = document.createElement('div');
+    modalOverlay.id = 'global-modal';
+    modalOverlay.className = 'modal-overlay';
+    modalOverlay.setAttribute('role', 'dialog');
+    modalOverlay.setAttribute('aria-modal', 'true');
+    modalOverlay.innerHTML = `
+      <div class="modal-content relative">
+        <button id="modal-close-btn"
+          class="absolute top-4 right-4 z-30 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-black flex items-center justify-center transition-colors text-base font-bold cursor-pointer shadow-sm border border-gray-200/60"
+          aria-label="Close modal">
+          ✕
+        </button>
+        <div id="modal-body-container"></div>
+      </div>
+    `;
+    document.body.appendChild(modalOverlay);
+  }
+
+  const closeBtn = modalOverlay.querySelector('#modal-close-btn');
+  if (closeBtn) {
+    closeBtn.onclick = window.closeModal;
+  }
+  modalOverlay.onclick = (e) => {
+    if (e.target === modalOverlay) window.closeModal();
+  };
+
+  const modalBody = modalOverlay.querySelector('#modal-body-container');
+  const modalContent = modalOverlay.querySelector('.modal-content');
+  if (modalContent) {
+    modalContent.classList.add('modal-large');
+    modalContent.style.maxWidth = '780px';
+  }
+
+  modalBody.innerHTML = `
+    <div class="p-5 sm:p-7 md:p-9 text-left">
+      <!-- Header with Logo and Badge -->
+      <div class="flex items-center justify-between gap-3 mb-4 pr-10">
+        <div class="flex items-center gap-3">
+          <img src="images/logo-dark.png" alt="FitNest" class="h-9 sm:h-11 w-auto object-contain" />
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Membership Policy</span>
+        </div>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 font-heading mb-1 tracking-tight">
+        FITNEST
+      </h2>
+      <h3 class="text-sm sm:text-base font-bold text-emerald-700 font-heading mb-4 tracking-wide uppercase">
+        MEMBERSHIP POLICY &amp; TERMS OF SERVICE
+      </h3>
+
+      <div class="bg-emerald-50/80 border border-emerald-100/90 rounded-xl p-4 sm:p-5 mb-6 text-gray-700 text-xs sm:text-sm leading-relaxed">
+        <p class="font-bold text-emerald-950 mb-1">Welcome to Fitnest!</p>
+        <p>We are committed to providing quality fitness coaching, personalised guidance and a positive training experience. To ensure clarity and fairness for all members, please read the following membership policies carefully before starting your programme.</p>
+      </div>
+
+      <!-- Policy Sections -->
+      <div class="space-y-6 text-gray-700 text-xs sm:text-sm leading-relaxed">
+        <!-- 1 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">1</span>
+            FITNESS ASSESSMENT &amp; REGISTRATION
+          </h4>
+          <ul class="space-y-1.5 pl-8 list-disc text-gray-600">
+            <li>Every member must complete the Fitnest Fitness Assessment Form before starting training.</li>
+            <li>Members must provide accurate details about their medical history, existing health conditions, injuries and fitness goals.</li>
+            <li>Any changes in health conditions or new injuries must be communicated to the trainer promptly.</li>
+          </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">2</span>
+            TRAINING PACKAGES &amp; MEMBERSHIP VALIDITY
+          </h4>
+          
+          <div class="pl-8 space-y-3">
+            <div>
+              <p class="font-bold text-gray-900 mb-1">A. Individual Personal Training, Couple Training &amp; Duo Training</p>
+              <ul class="space-y-1.5 list-disc pl-5 text-gray-600">
+                <li>All three packages include 22 training sessions within 35 calendar days.</li>
+                <li>Membership expires upon completion of 22 sessions or 35 calendar days, whichever occurs first.</li>
+                <li>Couple and Duo Training sessions are shared between two registered participants.</li>
+                <li>If one participant attends and the other is absent, the session will count as completed for both participants.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-bold text-gray-900 mb-1">B. Group Training</p>
+              <ul class="space-y-1.5 list-disc pl-5 text-gray-600">
+                <li>22 training sessions within 30 calendar days.</li>
+                <li>Sessions are conducted Monday to Friday, with Saturday and Sunday as weekly holidays.</li>
+                <li>Missed sessions cannot be carried forward or compensated, except where an extension is approved under the exceptional circumstances policy.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">3</span>
+            TRAINING SCHEDULE, SESSION DURATION &amp; RESCHEDULING
+          </h4>
+          <ul class="space-y-1.5 pl-8 list-disc text-gray-600">
+            <li>Each training session will last approximately 45 minutes to 1 hour, depending on the training programme and session requirements.</li>
+            <li>Members are expected to follow their mutually agreed training schedule.</li>
+            <li>If the trainer is unable to conduct a scheduled session, members will be informed in advance. The session will be rescheduled at a mutually convenient time without deducting it from the membership package.</li>
+            <li>For Couple and Duo Training, if both participants are unable to attend, at least <strong class="text-gray-900">12</strong> hours’ advance notice is required to request rescheduling.</li>
+            <li>Rescheduling requests are subject to trainer availability.</li>
+            <li>Late cancellations or missed sessions without sufficient notice may be counted as completed sessions.</li>
+          </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">4</span>
+            MEDICAL &amp; EXCEPTIONAL CIRCUMSTANCES
+          </h4>
+          <ul class="space-y-1.5 pl-8 list-disc text-gray-600">
+            <li>Members enrolled in Personal Training or Group Training who cannot attend for <strong class="text-gray-900">7</strong> or more consecutive days due to illness, injury or genuine personal circumstances may request a membership extension.</li>
+            <li>Members should inform Fitnest in advance whenever possible, preferably before the absence begins.</li>
+            <li>Supporting medical documents may be requested where necessary.</li>
+            <li>Each request will be reviewed individually and is subject to Fitnest approval.</li>
+          </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">5</span>
+            PAYMENT &amp; MEMBERSHIP RENEWAL
+          </h4>
+          <ul class="space-y-1.5 pl-8 list-disc text-gray-600">
+            <li>Membership fees must be paid in full before the training programme begins.</li>
+            <li>Membership validity starts from the mutually agreed activation date.</li>
+            <li>Renewal payments must be completed before starting the next membership package.</li>
+            <li>Memberships are non-transferable and cannot be assigned to another person.</li>
+            <li>Additional sessions beyond the selected package may involve extra charges.</li>
+            <li>Unused sessions expire at the end of the membership validity period unless an extension is approved by Fitnest.</li>
+          </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">6</span>
+            MEMBER RESPONSIBILITIES &amp; FITNESS DISCLAIMER
+          </h4>
+          <ul class="space-y-1.5 pl-8 list-disc text-gray-600">
+            <li>Members must provide accurate health information and communicate any relevant changes to the trainer.</li>
+            <li>Any pain, dizziness or unusual discomfort during exercise must be reported immediately.</li>
+            <li>Members are expected to follow the trainer’s instructions and maintain a safe training environment.</li>
+            <li>Fitness results vary depending on individual factors, consistency, nutrition and recovery. Fitnest does not guarantee specific weight-loss, muscle-gain or body-transformation results.</li>
+            <li>Fitness training is not a substitute for professional medical advice, diagnosis or treatment.</li>
+          </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="border-b border-gray-100 pb-5">
+          <h4 class="flex items-center gap-2.5 text-sm sm:text-base font-black text-gray-900 font-heading mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">7</span>
+            ONLINE TRAINING &amp; MEETING ACCESS
+          </h4>
+          <ul class="space-y-1.5 pl-8 list-disc text-gray-600">
+            <li>The official meeting link will be shared after successful payment and membership confirmation.</li>
+            <li>Members must use the designated meeting app to join their scheduled training sessions.</li>
+            <li>The same meeting link will be used for all sessions throughout the membership validity period.</li>
+            <li>Members must join on time and must not share the meeting link with others.</li>
+          </ul>
+        </div>
+
+        <!-- Commitment & Closing -->
+        <div class="bg-gray-50 rounded-xl p-4 sm:p-5 border border-gray-200/80">
+          <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-800 mb-2 font-heading">OUR COMMITMENT</h4>
+          <p class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3">
+            At Fitnest, we believe fitness should fit into your lifestyle. Our commitment is to provide accessible, effective and sustainable fitness coaching through quality training, personalised guidance and continuous support.
+          </p>
+          <p class="text-gray-700 text-xs sm:text-sm leading-relaxed font-medium">
+            We look forward to supporting you as you work towards a healthier, stronger and fitter lifestyle.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Tagline & Closing Option -->
+      <div class="mt-8 pt-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-500">THANK YOU FOR CHOOSING FITNEST.</p>
+          <p class="text-xs sm:text-sm font-bold text-emerald-800 font-heading">
+            FITNEST – Your Health, Your Fitness, Your Fitnest.
+          </p>
+        </div>
         <button onclick="closeModal()" type="button" class="w-full sm:w-auto bg-gray-900 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-colors shadow text-center cursor-pointer">
           Close
         </button>
