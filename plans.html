@@ -103,6 +103,22 @@
       <p class="text-gray-600 text-lg leading-relaxed">
         Choose the plan that fits your goals. No hidden fees, no long-term lock-ins, pause anytime.
       </p>
+
+      <!-- Billing Toggle -->
+      <div class="flex items-center justify-center gap-3 mt-8">
+        <span class="text-sm font-bold text-gray-700">Monthly</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="pricing-billing-toggle" class="sr-only peer" />
+          <div
+            class="w-13 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-emerald-600">
+          </div>
+        </label>
+        <span class="text-sm font-bold text-gray-700 flex items-center gap-1.5">
+          Quarterly
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Save
+            15%</span>
+        </span>
+      </div>
     </div>
   </section>
 
@@ -251,6 +267,7 @@
       </div>
     </div>
   </footer>
+
   <!-- Global Modal Container -->
   <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-content relative">
