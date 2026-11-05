@@ -881,10 +881,15 @@ function initCookieBanner() {
 
 /* ─── 9. Smooth Scroll for Anchor Links ─── */
 function initSmoothScroll() {
+  // Hashes handled by modal openers — skip these so modal click handlers work
+  const modalHashes = ['#about', '#privacy'];
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || targetId === '') return;
+      // Skip modal-handled links
+      if (modalHashes.includes(targetId)) return;
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();

@@ -456,19 +456,6 @@
           <p class="text-gray-500 text-lg leading-relaxed">
             Choose the plan that fits your goals. No hidden fees, no long-term lock-ins.
           </p>
-
-          <!-- Billing Frequency Toggle -->
-          <div class="flex items-center justify-center gap-3 mt-8">
-            <span class="text-sm font-bold text-gray-700">Monthly</span>
-            <label class="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" id="pricing-billing-toggle" class="sr-only peer" />
-              <div class="w-13 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-emerald-600"></div>
-            </label>
-            <span class="text-sm font-bold text-gray-700 flex items-center gap-1.5">
-              Quarterly
-              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Save 15%</span>
-            </span>
-          </div>
         </div>
 
         <!-- Plans Cards Grid -->
@@ -482,14 +469,14 @@
               </div>
 
               <div class="flex items-baseline gap-1 mb-8">
-                <span id="price-starter" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹899</span>
-                <span class="pricing-period text-gray-500 text-sm font-medium">/month</span>
+                <span class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹899</span>
+                <span class="text-gray-500 text-sm font-medium">/month</span>
               </div>
 
               <ul class="space-y-4 mb-8">
                 <li class="flex items-start gap-3 text-sm text-gray-700">
                   <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>18 group sessions/month</span>
+                  <span>22 group sessions/month</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-700">
                   <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -528,8 +515,8 @@
               </div>
 
               <div class="flex items-baseline gap-1 mb-8">
-                <span id="price-pro" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹3999</span>
-                <span class="pricing-period text-gray-500 text-sm font-medium">/month</span>
+                <span class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹3,999</span>
+                <span class="text-gray-500 text-sm font-medium">/month</span>
               </div>
 
               <ul class="space-y-4 mb-8">
@@ -573,8 +560,8 @@
               </div>
 
               <div class="flex items-baseline gap-1 mb-8">
-                <span id="price-elite" class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹5,999</span>
-                <span class="pricing-period text-gray-500 text-sm font-medium">/month</span>
+                <span class="text-4xl sm:text-5xl font-black text-gray-900 font-heading">₹5,999</span>
+                <span class="text-gray-500 text-sm font-medium">/month</span>
               </div>
 
               <ul class="space-y-4 mb-8">
@@ -1020,7 +1007,7 @@
               <li><a href="#plans" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Training Plans</a></li>
               <li><a href="#tips" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Lifestyle Tips</a></li>
               <li><a href="#contact" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Contact Us</a></li>
-              <li><a href="#privacy" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="#privacy" onclick="event.preventDefault();openPrivacyModal()" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -1067,7 +1054,7 @@
             <a href="#services" class="hover:text-gray-300 transition-colors">Services</a>
             <a href="#plans" class="hover:text-gray-300 transition-colors">Plans</a>
             <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
-            <a href="#privacy" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+            <a href="#privacy" onclick="event.preventDefault();openPrivacyModal()" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
           </div>
         </div>
       </div>
