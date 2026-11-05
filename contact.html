@@ -232,6 +232,18 @@
         </div>
       </div>
     </footer>
+    <!-- Global Modal Container -->
+    <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true">
+      <div class="modal-content relative">
+        <button id="modal-close-btn"
+          class="absolute top-4 right-4 z-30 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-black flex items-center justify-center transition-colors text-base font-bold cursor-pointer shadow-sm border border-gray-200/60"
+          aria-label="Close modal">
+          ✕
+        </button>
+        <div id="modal-body-container"></div>
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
     <script>
       // Support preselecting plan from query parameters

@@ -299,148 +299,32 @@ const tipData = {
 };
 
 /* ─── 6. Interactive Modals Management ─── */
-function ensureModalExists() {
-  let modalOverlay = document.getElementById('global-modal');
-  if (!modalOverlay) {
-    modalOverlay = document.createElement('div');
-    modalOverlay.id = 'global-modal';
-    modalOverlay.className = 'modal-overlay';
-    modalOverlay.setAttribute('role', 'dialog');
-    modalOverlay.setAttribute('aria-modal', 'true');
-    modalOverlay.innerHTML = `
-      <div class="modal-content relative">
-        <button id="modal-close-btn"
-          class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition-colors text-sm font-bold"
-          aria-label="Close modal">
-          ✕
-        </button>
-        <div id="modal-body-container"></div>
-      </div>
-    `;
-    document.body.appendChild(modalOverlay);
-  }
-
-  const modalCloseBtn = modalOverlay.querySelector('#modal-close-btn');
-  if (modalCloseBtn && !modalCloseBtn._bound) {
-    modalCloseBtn._bound = true;
-    modalCloseBtn.addEventListener('click', window.closeModal);
-  }
-
-  if (!modalOverlay._bound) {
-    modalOverlay._bound = true;
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) window.closeModal();
-    });
-  }
-
-  return modalOverlay;
-}
-
-window.closeModal = function() {
+function initModals() {
   const modalOverlay = document.getElementById('global-modal');
-  if (modalOverlay) {
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalBody = document.getElementById('modal-body-container');
+
+  if (!modalOverlay || !modalBody) return;
+
+  function closeModal() {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
   }
-};
 
-window.openAboutModal = function() {
-  ensureModalExists();
-  const modalOverlay = document.getElementById('global-modal');
-  const modalBody = document.getElementById('modal-body-container');
-  if (!modalOverlay || !modalBody) return;
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeModal);
+  }
 
-  modalBody.innerHTML = `
-    <div class="p-6 sm:p-8">
-      <!-- Header with Logo and Tagline -->
-      <div class="flex items-center gap-3.5 mb-5 pb-5 border-b border-gray-100">
-        <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 p-2 flex items-center justify-center shrink-0 shadow-sm">
-          <img src="images/favicon.png" alt="FitNest" class="w-full h-full object-contain" />
-        </div>
-        <div>
-          <span class="text-[11px] font-black uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full inline-block mb-0.5">Our Story</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-gray-900 font-heading">About Us</h2>
-        </div>
-      </div>
-
-      <!-- Main Tagline Banner -->
-      <div class="p-4 bg-gradient-to-r from-emerald-50 via-emerald-50/70 to-emerald-100/40 border border-emerald-200/70 rounded-2xl mb-6 shadow-sm">
-        <p class="text-emerald-900 font-extrabold text-base sm:text-lg tracking-tight">
-          Fitnest – Your Health, Your Fitness, Your Fitnest.
-        </p>
-      </div>
-
-      <!-- Body Copy -->
-      <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
-        <p>
-          At Fitnest, we believe that getting fit shouldn’t mean changing your entire life. It should fit into the life you already have.
-        </p>
-        <p>
-          We understand that balancing work, family, and everyday responsibilities can make it difficult to find time for fitness. Sometimes, all you need is the right guidance, a little motivation, and a plan that works for you.
-        </p>
-        <p class="font-bold text-gray-900 bg-gray-50/90 p-3.5 rounded-xl border-l-4 border-emerald-600">
-          That’s why we created Fitnest — to make fitness easier, more comfortable, and accessible to everyone.
-        </p>
-        <p>
-          Through our online personal training programmes, we help men and women work towards their fitness goals from the comfort of their homes. Whether you want to lose weight, build muscle, improve strength, or simply feel healthier and more confident, we’re here to guide you at every step.
-        </p>
-        <div class="bg-emerald-50/40 p-4 rounded-xl border border-emerald-100">
-          <p class="text-gray-900 font-medium">
-            <strong class="text-emerald-800">Our approach is simple:</strong> your goals, your pace, and a plan designed around you. We focus on personalised workouts, consistency, and building healthy habits that you can maintain in the long run.
-          </p>
-        </div>
-        <p>
-          You don’t have to be perfect to start, and you don’t have to do it alone. Every small step counts, and we’re here to help you keep moving forward.
-        </p>
-        <p>
-          At Fitnest, your fitness journey is personal to us. Let’s make a healthier lifestyle part of your everyday life.
-        </p>
-        <div class="pt-4 border-t border-gray-100 text-center sm:text-left">
-          <p class="font-black text-emerald-700 text-base sm:text-lg font-heading">
-            Fitnest — Your Health, Your Fitness, Your Fitnest.
-          </p>
-        </div>
-      </div>
-
-      <!-- Footer Actions -->
-      <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
-        <a href="https://wa.me/916238188277?text=Hi%20FitNest!%20I'd%20like%20to%20learn%20more%20about%20your%20personal%20training%20programs."
-           target="_blank"
-           class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-full text-center transition-all shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2">
-          <span>Book Free Consultation</span>
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.587 1.961.931 3.031.931h.005c3.181 0 5.768-2.586 5.769-5.766.001-3.181-2.585-5.767-5.766-5.767zm7.42 5.766c-.002 4.085-3.326 7.408-7.414 7.409-1.23 0-2.433-.306-3.504-.887l-3.882 1.018 1.035-3.782c-.642-1.114-.98-2.385-.98-3.689.002-4.085 3.326-7.408 7.414-7.409 4.087 0 7.412 3.324 7.413 7.409z"/></svg>
-        </a>
-        <button type="button"
-                onclick="window.closeModal()"
-                class="sm:w-auto px-6 py-3.5 border border-gray-200 text-gray-700 hover:bg-gray-100 font-bold rounded-full transition-colors text-center">
-          Close Window
-        </button>
-      </div>
-    </div>
-  `;
-
-  modalOverlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-};
-
-function initModals() {
-  const modalOverlay = ensureModalExists();
-  const modalBody = document.getElementById('modal-body-container');
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
-      window.closeModal();
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      closeModal();
     }
   });
 
-  // Handle all "About Us" triggers across header, mobile menu, footer
-  document.querySelectorAll('[data-about-trigger], a[href="about.html"]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.openAboutModal();
-      const mobileDrawer = document.getElementById('mobile-drawer') || document.getElementById('mobile-menu');
-      if (mobileDrawer) mobileDrawer.classList.add('hidden');
-    });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
   });
 
   // Service details click
@@ -521,12 +405,148 @@ function initModals() {
       document.body.style.overflow = 'hidden';
     });
   });
+
+  // Connect all About Us links across navbar, drawer, and footer to the responsive card window
+  document.querySelectorAll('a[href="#about"], a[href="about.html"], [data-open-about]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.openAboutModal();
+    });
+  });
+
+  // Open automatically if loaded with #about
+  if (window.location.hash === '#about') {
+    setTimeout(() => {
+      window.openAboutModal();
+    }, 150);
+  }
 }
+
+// Global helper to close modal
+window.closeModal = function() {
+  const modalOverlay = document.getElementById('global-modal');
+  if (modalOverlay) {
+    modalOverlay.classList.remove('active');
+  }
+  document.body.style.overflow = '';
+};
+
+// Global helper to close modal and navigate to booking
+window.closeModalAndBook = function() {
+  window.closeModal();
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    window.location.href = 'index.html#contact';
+  }
+};
+
+// Global helper to open responsive About Us card window
+window.openAboutModal = function() {
+  let modalOverlay = document.getElementById('global-modal');
+  if (!modalOverlay) {
+    modalOverlay = document.createElement('div');
+    modalOverlay.id = 'global-modal';
+    modalOverlay.className = 'modal-overlay';
+    modalOverlay.setAttribute('role', 'dialog');
+    modalOverlay.setAttribute('aria-modal', 'true');
+    modalOverlay.innerHTML = `
+      <div class="modal-content relative">
+        <button id="modal-close-btn"
+          class="absolute top-4 right-4 z-30 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-black flex items-center justify-center transition-colors text-base font-bold cursor-pointer shadow-sm border border-gray-200/60"
+          aria-label="Close modal">
+          ✕
+        </button>
+        <div id="modal-body-container"></div>
+      </div>
+    `;
+    document.body.appendChild(modalOverlay);
+  }
+
+  const closeBtn = modalOverlay.querySelector('#modal-close-btn');
+  if (closeBtn) {
+    closeBtn.onclick = window.closeModal;
+  }
+  modalOverlay.onclick = (e) => {
+    if (e.target === modalOverlay) window.closeModal();
+  };
+
+  const modalBody = modalOverlay.querySelector('#modal-body-container');
+  const modalContent = modalOverlay.querySelector('.modal-content');
+  if (modalContent) modalContent.classList.add('modal-large');
+
+  modalBody.innerHTML = `
+    <div class="p-6 sm:p-8 md:p-10 text-left">
+      <!-- Header with Logo and Badge -->
+      <div class="flex items-center justify-between gap-3 mb-4 pr-10">
+        <div class="flex items-center gap-3">
+          <img src="images/logo-dark.png" alt="FitNest" class="h-9 sm:h-11 w-auto object-contain" />
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">About Us</span>
+        </div>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 font-heading mb-1.5 tracking-tight">
+        About Us
+      </h2>
+      <p class="text-emerald-700 font-bold text-sm sm:text-base mb-6 font-heading">
+        Fitnest – Your Health, Your Fitness, Your Fitnest.
+      </p>
+
+      <!-- Narrative Body -->
+      <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+        <p>
+          At Fitnest, we believe that getting fit shouldn’t mean changing your entire life. It should fit into the life you already have.
+        </p>
+        <p>
+          We understand that balancing work, family, and everyday responsibilities can make it difficult to find time for fitness. Sometimes, all you need is the right guidance, a little motivation, and a plan that works for you.
+        </p>
+        <p>
+          That’s why we created Fitnest — to make fitness easier, more comfortable, and accessible to everyone.
+        </p>
+        <p>
+          Through our online personal training programmes, we help men and women work towards their fitness goals from the comfort of their homes. Whether you want to lose weight, build muscle, improve strength, or simply feel healthier and more confident, we’re here to guide you at every step.
+        </p>
+        <p>
+          Our approach is simple: your goals, your pace, and a plan designed around you. We focus on personalised workouts, consistency, and building healthy habits that you can maintain in the long run.
+        </p>
+        <p>
+          You don’t have to be perfect to start, and you don’t have to do it alone. Every small step counts, and we’re here to help you keep moving forward.
+        </p>
+        <p class="font-medium text-gray-900">
+          At Fitnest, your fitness journey is personal to us. Let’s make a healthier lifestyle part of your everyday life.
+        </p>
+      </div>
+
+      <!-- Bottom Tagline & Closing Option -->
+      <div class="mt-8 pt-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs sm:text-sm font-bold text-emerald-800 font-heading text-center sm:text-left">
+          Fitnest — Your Health, Your Fitness, Your Fitnest.
+        </p>
+        <button onclick="closeModal()" type="button" class="w-full sm:w-auto bg-gray-900 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-colors shadow text-center cursor-pointer">
+          Close
+        </button>
+      </div>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Auto-close mobile drawer if open
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.add('hidden');
+    if (iconMenu) iconMenu.classList.remove('hidden');
+    if (iconClose) iconClose.classList.add('hidden');
+  }
+};
 
 // Global helper to open booking modal for a plan
 window.openBookingForPlan = function(planName) {
-  const modalOverlay = document.getElementById('global-modal');
-  if (modalOverlay) modalOverlay.classList.remove('active');
+  window.closeModal();
 
   const contactSection = document.getElementById('contact');
   if (contactSection) {

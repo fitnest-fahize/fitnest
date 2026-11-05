@@ -107,7 +107,7 @@
       <!-- Desktop Navigation -->
       <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-7">
         <a href="index.html" class="nav-link text-sm font-semibold active">Home</a>
-        <a href="about.html" data-about-trigger class="nav-link text-sm font-semibold cursor-pointer">About Us</a>
+        <a href="#about" class="nav-link text-sm font-semibold">About Us</a>
         <a href="#services" class="nav-link text-sm font-semibold">Our Services</a>
         <a href="#plans" class="nav-link text-sm font-semibold">Training Plans</a>
         <a href="#tips" class="nav-link text-sm font-semibold">Lifestyle Tips</a>
@@ -142,8 +142,8 @@
       class="hidden lg:hidden bg-white border-t border-gray-100 shadow-2xl transition-all duration-300">
       <nav aria-label="Mobile navigation" class="flex flex-col px-6 py-4 gap-1">
         <a href="index.html" class="py-3 text-sm font-semibold text-emerald-600 border-b border-gray-100">Home</a>
-        <a href="about.html" data-about-trigger
-          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors cursor-pointer">About
+        <a href="#about"
+          class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">About
           Us</a>
         <a href="#services"
           class="py-3 text-sm font-semibold text-gray-700 hover:text-emerald-600 border-b border-gray-100 transition-colors">Our
@@ -1064,7 +1064,7 @@
         <div>
           <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h3>
           <ul class="space-y-3">
-            <li><a href="about.html" data-about-trigger class="text-gray-400 text-sm hover:text-emerald-400 transition-colors cursor-pointer">About Us</a>
+            <li><a href="#about" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">About Us</a>
             </li>
             <li><a href="#plans" class="text-gray-400 text-sm hover:text-emerald-400 transition-colors">Training
                 Plans</a></li>
@@ -1108,7 +1108,7 @@
         class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
         <p>© 2026 FitNest. All rights reserved. | fitnestonline.in</p>
         <div class="flex gap-6">
-          <a href="about.html" data-about-trigger class="hover:text-gray-300 transition-colors cursor-pointer">About Us</a>
+          <a href="#about" class="hover:text-gray-300 transition-colors">About Us</a>
           <a href="#services" class="hover:text-gray-300 transition-colors">Services</a>
           <a href="#plans" class="hover:text-gray-300 transition-colors">Plans</a>
           <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
@@ -1126,11 +1126,11 @@
     </svg>
   </a>
 
-  <!-- ─── GLOBAL MODAL CONTAINER (Services & Tips details) ─── -->
+  <!-- ─── GLOBAL MODAL CONTAINER (Services, Tips & About Us) ─── -->
   <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-content relative">
       <button id="modal-close-btn"
-        class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition-colors"
+        class="absolute top-4 right-4 z-30 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-black flex items-center justify-center transition-colors text-base font-bold cursor-pointer shadow-sm border border-gray-200/60"
         aria-label="Close modal">
         ✕
       </button>
